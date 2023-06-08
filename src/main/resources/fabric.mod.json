@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "frostbite",
+	"version": "${version}",
+	"name": "Frostbite",
+	"description": "The official FrostBite Mod!",
+	"authors": [
+		"Arktikus"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "",
+	"icon": "assets/frostbite/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"me.arktikus.frostbite.FrostBite"
+		],
+		"client": [
+			"me.arktikus.frostbite.FrostBiteClient"
+		],
+		"fabric-datagen": [
+			"me.arktikus.frostbite.FrostBiteDataGenerator"
+		]
+	},
+	"mixins": [
+		"frostbite.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.14.21",
+		"minecraft": "~1.20",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
