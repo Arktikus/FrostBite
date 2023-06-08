@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "frostbite:citrine_ore",
+    "frostbite:citrine_block",
+    "frostbite:citrine_deepslate_ore"
+  ]
+}

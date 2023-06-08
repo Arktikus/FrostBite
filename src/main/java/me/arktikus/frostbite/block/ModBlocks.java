@@ -27,7 +27,7 @@ public class ModBlocks {
             new ExperienceDroppingBlock(FabricBlockSettings.create().mapColor(MapColor.IRON_GRAY).strength(4.0f).requiresTool().solid(),
             UniformIntProvider.create(2, 6)), ModItemGroup.CITRINE);
 
-    public static final Block DEEPSLATE_CITRINE_ORE = registerBlock("citrine_deepslate_ore",
+    public static final Block CITRINE_DEEPSLATE_ORE = registerBlock("citrine_deepslate_ore",
             new ExperienceDroppingBlock(FabricBlockSettings.create().mapColor(MapColor.IRON_GRAY).strength(6.0f).requiresTool().solid(),
                     UniformIntProvider.create(3, 7)), ModItemGroup.CITRINE);
 
