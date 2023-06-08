@@ -1,5 +1,8 @@
 package me.arktikus.frostbite;
 
+import me.arktikus.frostbite.block.ModBlocks;
+import me.arktikus.frostbite.item.ModItemGroup;
+import me.arktikus.frostbite.item.ModItems;
 import net.fabricmc.api.ModInitializer;
 
 import org.slf4j.Logger;
@@ -11,10 +14,11 @@ public class FrostBite implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
-		// This code runs as soon as Minecraft is in a mod-load-ready state.
-		// However, some things (like resources) may still be uninitialized.
-		// Proceed with mild caution.
+		ModItemGroup.registerItemGroups();
 
-		LOGGER.info("Hello Fabric world!");
+		ModItems.registerModItems();
+		ModBlocks.registerModBlocks();
+
+		LOGGER.info("Initializing FrostBite Mod!");
 	}
 }

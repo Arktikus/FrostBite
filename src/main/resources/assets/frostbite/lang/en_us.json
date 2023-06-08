@@ -1,0 +1,10 @@
+{
+  "item.frostbite.citrine": "Citrine",
+  "item.frostbite.raw_citrine": "Raw Citrine",
+
+  "block.frostbite.citrine_block": "Citrine Block",
+  "block.frostbite.citrine_ore": "Citrine Ore",
+  "block.frostbite.citrine_deepslate_ore": "Citrine Deepslate Ore",
+
+  "itemgroup.citrine": "Citrine Item Group"
+}
