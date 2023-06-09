@@ -6,5 +6,13 @@
   "block.frostbite.citrine_ore": "Citrine Ore",
   "block.frostbite.citrine_deepslate_ore": "Citrine Deepslate Ore",
 
+  "block.frostbite.red_maple_log": "Red Maple Log",
+  "block.frostbite.red_maple_wood": "Red Maple Wood",
+  "block.frostbite.stripped_red_maple_log": "Stripped Red Maple Log",
+  "block.frostbite.stripped_red_maple_wood": "Stripped Red Maple Wood",
+  "block.frostbite.red_maple_planks": "Red Maple Planks",
+  "block.frostbite.red_maple_leaves": "Red Maple Leaves",
+  "block.frostbite.red_maple_sapling": "Red Maple Sapling",
+
   "itemgroup.citrine": "Citrine Item Group"
 }

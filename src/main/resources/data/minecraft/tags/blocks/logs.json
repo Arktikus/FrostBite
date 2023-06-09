@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "frostbite:red_maple_log",
+    "frostbite:red_maple_wood",
+    "frostbite:stripped_red_maple_log",
+    "frostbite:stripped_red_maple_wood"
+  ]
+}
