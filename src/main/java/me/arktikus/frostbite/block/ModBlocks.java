@@ -2,6 +2,7 @@ package me.arktikus.frostbite.block;
 
 import me.arktikus.frostbite.FrostBite;
 import me.arktikus.frostbite.item.ModItemGroup;
+import me.arktikus.frostbite.sound.ModSounds;
 import me.arktikus.frostbite.world.tree.RedMapleSaplingGenerator;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
@@ -20,7 +21,7 @@ public class ModBlocks {
     //public static final Block CITRINE_BLOCK = registerBlock("citrine_block",
             //new Block(FabricBlockSettings.copyOf(Material.METAL).strength(4.0f).requiresTool()), ModItemGroup.CITRINE);   | Sadly outdated in the newest VERISON.
     public static final Block CITRINE_BLOCK = registerBlock("citrine_block",
-            new Block(FabricBlockSettings.create().mapColor(MapColor.IRON_GRAY).strength(4.0f).requiresTool().solid()), ModItemGroup.CITRINE);
+            new Block(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).sounds(ModSounds.ANIMATED_BLOCK_SOUNDS).strength(4.0f).requiresTool().solid()), ModItemGroup.CITRINE);
 
     public static final Block CITRINE_ORE = registerBlock("citrine_ore",
             new ExperienceDroppingBlock(FabricBlockSettings.create().mapColor(MapColor.IRON_GRAY).strength(4.0f).requiresTool().solid(),

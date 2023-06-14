@@ -7,6 +7,7 @@ import me.arktikus.frostbite.entity.custom.PinguinEntity;
 import me.arktikus.frostbite.entity.custom.TigerEntity;
 import me.arktikus.frostbite.item.ModItemGroup;
 import me.arktikus.frostbite.item.ModItems;
+import me.arktikus.frostbite.painting.ModPaintings;
 import me.arktikus.frostbite.world.gen.ModWorldGeneration;
 import net.fabricmc.api.ModInitializer;
 
@@ -32,6 +33,8 @@ public class FrostBite implements ModInitializer {
 		ModFlammableBlockRegistry.registerFlammableBlocks();
 		StrippableBlockRegistry.register(ModBlocks.RED_MAPLE_LOG, ModBlocks.STRIPPED_RED_MAPLE_LOG); //TRANSFER TO OWN CLASS
 		StrippableBlockRegistry.register(ModBlocks.RED_MAPLE_WOOD, ModBlocks.STRIPPED_RED_MAPLE_WOOD); //TRANSFER TO OWN CLASS
+
+		ModPaintings.registerPaintings();
 
 		FabricDefaultAttributeRegistry.register(ModEntities.TIGER, TigerEntity.setAttributes());
 		FabricDefaultAttributeRegistry.register(ModEntities.PINGUIN, PinguinEntity.setAttributes());

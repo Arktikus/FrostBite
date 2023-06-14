@@ -21,6 +21,6 @@ public class ModEntityGeneration {
                 Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, AnimalEntity::isValidNaturalSpawn);
 
         //SpawnRestriction.register(ModEntities.PINGUIN, SpawnRestriction.Location.ON_GROUND,
-                //Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, AnimalEntity::isValidNaturalSpawn);
+                //Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, AnimalEntity::isValidNaturalSpawn); - TODO - Implement SpawnRestriction!
     }
 }

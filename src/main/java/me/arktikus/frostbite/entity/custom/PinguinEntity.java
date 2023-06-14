@@ -1,10 +1,12 @@
 package me.arktikus.frostbite.entity.custom;
 
 import me.arktikus.frostbite.entity.ModEntities;
+import me.arktikus.frostbite.sound.ModSounds;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.ai.goal.*;
 import net.minecraft.entity.attribute.DefaultAttributeContainer;
 import net.minecraft.entity.attribute.EntityAttributes;
+import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.mob.GuardianEntity;
 import net.minecraft.entity.passive.*;
 import net.minecraft.entity.player.PlayerEntity;
@@ -77,6 +79,16 @@ public class PinguinEntity extends AnimalEntity implements GeoEntity {
             super(pinguin, speed);
             this.pinguin = pinguin;
         }
+    }
+
+    @Override
+    protected SoundEvent getHurtSound(DamageSource source) {
+        return ModSounds.ENTITY_PINGUIN_HURT;
+    }
+
+    @Override
+    protected SoundEvent getDeathSound() {
+        return ModSounds.ENTITY_PINGUIN_DEATH;
     }
 
     @Override

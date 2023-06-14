@@ -1,6 +1,7 @@
 {
   "item.frostbite.citrine": "Citrine",
   "item.frostbite.raw_citrine": "Raw Citrine",
+
   "item.frostbite.tiger_spawn_egg": "Tiger Spawn Egg",
   "item.frostbite.pinguin_spawn_egg": "Pinguin Spawn Egg",
 
@@ -15,6 +16,13 @@
   "block.frostbite.red_maple_planks": "Red Maple Planks",
   "block.frostbite.red_maple_leaves": "Red Maple Leaves",
   "block.frostbite.red_maple_sapling": "Red Maple Sapling",
+
+  "painting.frostbite.sunset.title": "Sunset Painting",
+  "painting.frostbite.plant.title": "Plant Painting",
+  "painting.frostbite.wanderer.title": "Wanderer Painting",
+  "painting.frostbite.sunset.author": "PlatinumG17",
+  "painting.frostbite.plant.author": "PlatinumG17",
+  "painting.frostbite.wanderer.author": "PlatinumG17",
 
   "itemgroup.citrine": "Citrine Item Group"
 }
