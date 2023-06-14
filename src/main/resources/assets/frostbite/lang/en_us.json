@@ -24,5 +24,12 @@
   "painting.frostbite.plant.author": "PlatinumG17",
   "painting.frostbite.wanderer.author": "PlatinumG17",
 
+  "message.frostbite.drank_water": "Drank Water!",
+  "message.frostbite.no_water": "No water around!",
+
+  "key.category.frostbite": "FrostBite Mod",
+  "key.frostbite.opengui": "FrostBite GUI",
+  "key.frostbite.drink_water": "Drink Water Key",
+
   "itemgroup.citrine": "Citrine Item Group"
 }
