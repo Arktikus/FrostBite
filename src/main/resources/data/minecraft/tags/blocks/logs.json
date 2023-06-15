@@ -1,9 +1,9 @@
 {
   "replace": false,
   "values": [
-    "frostbite:red_maple_log",
-    "frostbite:red_maple_wood",
-    "frostbite:stripped_red_maple_log",
-    "frostbite:stripped_red_maple_wood"
+    "frostbite:blue_arctic_log",
+    "frostbite:blue_arctic_wood",
+    "frostbite:stripped_blue_arctic_log",
+    "frostbite:stripped_blue_arctic_wood"
   ]
 }

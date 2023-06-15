@@ -1,7 +1,0 @@
-{
-  "parent": "minecraft:block/cube_column",
-  "textures": {
-    "end": "frostbite:block/stripped_red_maple_log",
-    "side": "frostbite:block/stripped_red_maple_log"
-  }
-}

@@ -17,12 +17,12 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
 
     @Override
     public void generate(Consumer<RecipeJsonProvider> exporter) {
-        offerSmelting(exporter, List.of(ModItems.RAW_CITRINE), RecipeCategory.MISC, ModItems.RAW_CITRINE,
+        offerSmelting(exporter, List.of(ModItems.RAW_ARKTIRIUM), RecipeCategory.MISC, ModItems.RAW_ARKTIRIUM,
                 0.7f, 200, "citrine");
-        offerBlasting(exporter, List.of(ModItems.RAW_CITRINE), RecipeCategory.MISC, ModItems.RAW_CITRINE,
+        offerBlasting(exporter, List.of(ModItems.RAW_ARKTIRIUM), RecipeCategory.MISC, ModItems.RAW_ARKTIRIUM,
                 0.7f, 100, "citrine");
 
-        offerReversibleCompactingRecipes(exporter, RecipeCategory.BUILDING_BLOCKS, ModItems.CITRINE, RecipeCategory.MISC,
-                ModBlocks.CITRINE_BLOCK);
+        offerReversibleCompactingRecipes(exporter, RecipeCategory.BUILDING_BLOCKS, ModItems.ARKTIRIUM, RecipeCategory.MISC,
+                ModBlocks.ARKTIRIUM_BLOCK);
     }
 }

@@ -14,9 +14,9 @@ import net.minecraft.registry.RegistryKey;
 import net.minecraft.util.Identifier;
 
 public class ModItems {
-    public static final Item CITRINE = registerItem("citrine",
+    public static final Item ARKTIRIUM = registerItem("arktirium",
             new Item(new FabricItemSettings()));
-    public static final Item RAW_CITRINE = registerItem("raw_citrine",
+    public static final Item RAW_ARKTIRIUM = registerItem("raw_arktirium",
             new Item(new FabricItemSettings()));
 
     public static final Item TIGER_SPAWN_EGG = registerItem("tiger_spawn_egg",
@@ -37,15 +37,15 @@ public class ModItems {
     }
 
     public static void addItemsToItemGroup() {
-        addToItemGroup(ItemGroups.INGREDIENTS, CITRINE);
-        addToItemGroup(ItemGroups.INGREDIENTS, RAW_CITRINE);
+        addToItemGroup(ItemGroups.INGREDIENTS, ARKTIRIUM);
+        addToItemGroup(ItemGroups.INGREDIENTS, RAW_ARKTIRIUM);
 
-        addToItemGroup(ModItemGroup.CITRINE, CITRINE);
-        addToItemGroup(ModItemGroup.CITRINE, RAW_CITRINE);
+        addToItemGroup(ModItemGroup.ARKTIRIUM, ARKTIRIUM);
+        addToItemGroup(ModItemGroup.ARKTIRIUM, RAW_ARKTIRIUM);
 
-        addToItemGroup(ModItemGroup.CITRINE, TIGER_SPAWN_EGG);
-        addToItemGroup(ModItemGroup.CITRINE, PINGUIN_SPAWN_EGG);
-        addToItemGroup(ModItemGroup.CITRINE, SHARK_SPAWN_EGG);
+        addToItemGroup(ModItemGroup.ARKTIRIUM, TIGER_SPAWN_EGG);
+        addToItemGroup(ModItemGroup.ARKTIRIUM, PINGUIN_SPAWN_EGG);
+        addToItemGroup(ModItemGroup.ARKTIRIUM, SHARK_SPAWN_EGG);
     }
 
     private static void addToItemGroup(RegistryKey<ItemGroup> group, Item item) {

@@ -8,7 +8,7 @@ import net.minecraft.world.gen.GenerationStep;
 
 public class ModTreeGeneration {
     public static void generateTrees() {
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.PLAINS, BiomeKeys.FOREST),
-                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.RED_MAPLE_PLACED_KEY);
+        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.GROVE, BiomeKeys.SNOWY_TAIGA, BiomeKeys.ICE_SPIKES),
+                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.BLUE_ARCTIC_PLACED_KEY);
     }
 }

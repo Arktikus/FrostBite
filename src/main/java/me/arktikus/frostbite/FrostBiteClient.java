@@ -18,8 +18,8 @@ import net.minecraft.client.render.RenderLayer;
 public class FrostBiteClient implements ClientModInitializer {
     @Override
     public void onInitializeClient() {
-        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.RED_MAPLE_LEAVES, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.RED_MAPLE_SAPLING, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.BLUE_ARCTIC_LEAVES, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.BLUE_ARCTIC_SAPLING, RenderLayer.getCutout());
 
         EntityRendererRegistry.register(ModEntities.TIGER, TigerRenderer::new);
         EntityRendererRegistry.register(ModEntities.PINGUIN, PinguinRenderer::new);

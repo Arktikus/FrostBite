@@ -1,6 +1,10 @@
 {
   "replace": false,
   "values": [
-    "frostbite:citrine_ore"
+    "frostbite:arktirium_ore",
+    "frostbite:blue_arctic_log",
+    "frostbite:blue_arctic_wood",
+    "frostbite:stripped_blue_arctic_log",
+    "frostbite:stripped_blue_arctic_wood"
   ]
 }
