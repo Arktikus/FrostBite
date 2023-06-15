@@ -32,7 +32,7 @@ public class DrinkingC2SPacket {
             serverWorld.playSound(null, player.getBlockPos(), SoundEvents.ENTITY_GENERIC_DRINK, SoundCategory.PLAYERS,
                     0.5f, serverWorld.random.nextFloat() * 0.1F + 0.9F);
 
-            ThirstData.addThirst((IEntityDataSaver) player, 1);
+            ThirstData.addThirst(((IEntityDataSaver) player), 1);
 
             player.sendMessage(Text.literal("Thirst: " + ((IEntityDataSaver) player).getPersistentData().getInt("thirst"))
                     .fillStyle(Style.EMPTY.withColor(Formatting.DARK_AQUA)));
@@ -44,7 +44,7 @@ public class DrinkingC2SPacket {
             player.sendMessage(Text.literal("Thirst: " + ((IEntityDataSaver) player).getPersistentData().getInt("thirst"))
                     .fillStyle(Style.EMPTY.withColor(Formatting.DARK_AQUA)));
 
-
+            ThirstData.syncThirst(((IEntityDataSaver) player).getPersistentData().getInt("thirst"), player);
         }
     }
 

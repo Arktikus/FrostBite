@@ -1,4 +1,4 @@
-// 1.20	2023-06-13T19:03:29.1788557	Frostbite/Model Definitions
+// 1.20	2023-06-15T00:38:44.3703054	Frostbite/Model Definitions
 361bfda436aa591a3d865da72a76b956abdebba4 assets\frostbite\blockstates\red_maple_wood.json
 0cd6396c2f3e065f2ca257757890e97c42bb4080 assets\frostbite\blockstates\red_maple_planks.json
 10ce34ec5eea0463d5d3083c3059efe0140e0562 assets\frostbite\models\item\stripped_red_maple_log.json
@@ -24,14 +24,15 @@ e0656c5eae956fa3f423a766c477049fdfda437f assets\frostbite\models\item\red_maple_
 63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets\frostbite\models\item\pinguin_spawn_egg.json
 94b1d43a80b90b34ac244e2d15ffdfc000670f1a assets\frostbite\models\block\citrine_ore.json
 165ed83d1b4cd62853f00db8864c620bd93d99fe assets\frostbite\models\block\red_maple_sapling.json
-0504c2a22c70b0d32e9d533196f89f73299eab11 assets\frostbite\models\block\citrine_block.json
 a29842209adb2df099b26b48ea235db143b9acd1 assets\frostbite\models\block\citrine_deepslate_ore.json
+0504c2a22c70b0d32e9d533196f89f73299eab11 assets\frostbite\models\block\citrine_block.json
 282244101248177ac52d1870dec8c1b34204dfa4 assets\frostbite\models\block\red_maple_wood.json
 8b98d1a507a3bf413da67fca038b5891b5be4ffd assets\frostbite\models\block\red_maple_log.json
 86fa930d3f14a0ebea99df3d16860b4242203afc assets\frostbite\models\item\stripped_red_maple_wood.json
 d16b927d20b3d95e3ce4f5a5aefed075c0dae499 assets\frostbite\models\block\stripped_red_maple_log_horizontal.json
 fe568f8e348aaf706b77c3a89d14a26254985c3b assets\frostbite\models\item\raw_citrine.json
 9f48cd3a36c1c5b70147c5e4eea6094ef4d288e1 assets\frostbite\models\item\red_maple_planks.json
+63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets\frostbite\models\item\shark_spawn_egg.json
 8da31ce7477fb95d51ab126dae42c4a3fe80a942 assets\frostbite\models\item\citrine_deepslate_ore.json
 da5817a7762a668adc7bc0c6f2a18420f4c4ff51 assets\frostbite\models\item\red_maple_sapling.json
 204dfe370f1ed0781848c90ecf7be7b7e1ba4d9a assets\frostbite\models\block\red_maple_log_horizontal.json

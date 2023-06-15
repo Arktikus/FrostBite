@@ -27,6 +27,11 @@ public class ModItems {
             new SpawnEggItem(ModEntities.PINGUIN, 0x091238, 0x000000,
                     new FabricItemSettings()));
 
+        public static final Item SHARK_SPAWN_EGG = registerItem("shark_spawn_egg",
+            new SpawnEggItem(ModEntities.SHARK, 0x096238, 0x000532,
+                    new FabricItemSettings()));
+
+
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, new Identifier(FrostBite.MOD_ID, name), item);
     }
@@ -40,6 +45,7 @@ public class ModItems {
 
         addToItemGroup(ModItemGroup.CITRINE, TIGER_SPAWN_EGG);
         addToItemGroup(ModItemGroup.CITRINE, PINGUIN_SPAWN_EGG);
+        addToItemGroup(ModItemGroup.CITRINE, SHARK_SPAWN_EGG);
     }
 
     private static void addToItemGroup(RegistryKey<ItemGroup> group, Item item) {

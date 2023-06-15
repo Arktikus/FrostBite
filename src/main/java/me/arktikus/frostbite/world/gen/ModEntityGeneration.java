@@ -17,6 +17,10 @@ public class ModEntityGeneration {
         BiomeModifications.addSpawn(BiomeSelectors.includeByKey(BiomeKeys.SNOWY_TAIGA, BiomeKeys.ICE_SPIKES), SpawnGroup.CREATURE,
                 ModEntities.PINGUIN, 35, 3, 7);
 
+                BiomeModifications.addSpawn(BiomeSelectors.includeByKey(BiomeKeys.OCEAN, BiomeKeys.WARM_OCEAN), SpawnGroup.MONSTER,
+                ModEntities.SHARK, 35, 1, 1); //TODO IMPLEMENT SPAWN RESTRICTIONS
+
+
         SpawnRestriction.register(ModEntities.TIGER, SpawnRestriction.Location.ON_GROUND,
                 Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, AnimalEntity::isValidNaturalSpawn);
 
