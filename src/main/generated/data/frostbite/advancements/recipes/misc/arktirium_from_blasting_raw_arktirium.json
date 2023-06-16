@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_raw_arktirium": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "frostbite:raw_arktirium"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:arktirium_from_blasting_raw_arktirium"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_raw_arktirium",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:arktirium_from_blasting_raw_arktirium"
+    ]
+  },
+  "sends_telemetry_event": false
+}

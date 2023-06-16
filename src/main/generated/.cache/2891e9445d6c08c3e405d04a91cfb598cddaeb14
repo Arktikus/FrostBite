@@ -1,4 +1,11 @@
-// 1.20	2023-06-15T00:38:44.3713055	Frostbite/Block Loot Tables
-69981ba226170ec675de15227d2345dcedb69051 data\frostbite\loot_tables\blocks\citrine_deepslate_ore.json
-b4429723194a89a913c7f48abcbaa4088e482734 data\frostbite\loot_tables\blocks\citrine_block.json
-5a22f944a8838b9223351e69b6e696f800eeaa62 data\frostbite\loot_tables\blocks\citrine_ore.json
+// 1.20	2023-06-17T00:26:41.7437756	Frostbite/Block Loot Tables
+7ecac30699f701357948b16a9c9d58ad08e1a983 data\frostbite\loot_tables\blocks\stripped_blue_arctic_log.json
+5fc9d5fd2400242c8b5228caf498f4d61b961d27 data\frostbite\loot_tables\blocks\stripped_blue_arctic_wood.json
+745985a0aa9c0497f378178e93a405b0a922a54b data\frostbite\loot_tables\blocks\arktirium_ore.json
+d804f62088840cd3a4ad542af37dcaf9aface6be data\frostbite\loot_tables\blocks\blue_arctic_leaves.json
+71942df845bf11a2527949c72fe8120ec145f4e6 data\frostbite\loot_tables\blocks\blue_arctic_sapling.json
+0f9fd720f6c7a23735b443c8d00f069bae6a7e18 data\frostbite\loot_tables\blocks\blue_arctic_planks.json
+ef18758a3d07971944cd9e6b4a5996a2fa03e0f6 data\frostbite\loot_tables\blocks\blue_arctic_wood.json
+88f554d28db97a8bb4ae7867243462ddc058ccca data\frostbite\loot_tables\blocks\blue_arctic_log.json
+bbecc80635f901a4eb32aae0cf1ee87731ca8b3b data\frostbite\loot_tables\blocks\deepslate_arktirium_ore.json
+b21ab8786b307388719732bf10bc53a72859a3d1 data\frostbite\loot_tables\blocks\arktirium_block.json

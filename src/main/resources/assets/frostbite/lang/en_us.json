@@ -1,21 +1,27 @@
 {
-  "item.frostbite.citrine": "Citrine",
-  "item.frostbite.raw_citrine": "Raw Citrine",
+  "item.frostbite.arktirium": "Arktirium",
+  "item.frostbite.raw_arktirium": "Raw Arktirium",
 
   "item.frostbite.tiger_spawn_egg": "Tiger Spawn Egg",
   "item.frostbite.pinguin_spawn_egg": "Pinguin Spawn Egg",
+  "item.frostbite.shark_spawn_egg": "Shark Spawn Egg",
 
-  "block.frostbite.citrine_block": "Citrine Block",
-  "block.frostbite.citrine_ore": "Citrine Ore",
-  "block.frostbite.citrine_deepslate_ore": "Citrine Deepslate Ore",
+  "block.frostbite.arktirium_block": "Arktirium Block",
+  "block.frostbite.arktirium_ore": "Arktirium Ore",
+  "block.frostbite.deepslate_arktirium_ore": "Arktirium Deepslate Ore",
 
-  "block.frostbite.red_maple_log": "Red Maple Log",
-  "block.frostbite.red_maple_wood": "Red Maple Wood",
-  "block.frostbite.stripped_red_maple_log": "Stripped Red Maple Log",
-  "block.frostbite.stripped_red_maple_wood": "Stripped Red Maple Wood",
-  "block.frostbite.red_maple_planks": "Red Maple Planks",
-  "block.frostbite.red_maple_leaves": "Red Maple Leaves",
-  "block.frostbite.red_maple_sapling": "Red Maple Sapling",
+  "block.frostbite.blue_arctic_log": "Blue Arctic Log",
+  "block.frostbite.blue_arctic_wood": "Blue Arctic Wood",
+  "block.frostbite.stripped_blue_arctic_log": "Stripped Blue Arctic Log",
+  "block.frostbite.stripped_blue_arctic_wood": "Stripped Blue Arctic Wood",
+  "block.frostbite.blue_arctic_planks": "Blue Arctic Planks",
+  "block.frostbite.blue_arctic_leaves": "Blue Arctic Leaves",
+  "block.frostbite.blue_arctic_sapling": "Blue Arctic Sapling",
+  "block.frostbite.blue_arctic_stairs": "Blue Arctic Stairs",
+  "block.frostbite.blue_arctic_slab": "Blue Arctic Slab",
+  "block.frostbite.blue_arctic_door": "Blue Arctic Door",
+  "block.frostbite.blue_arctic_trapdoor": "Blue Arctic Trapdoor",
+  "item.frostbite.blue_arctic_stick": "Blue Arctic Stick",
 
   "painting.frostbite.sunset.title": "Sunset Painting",
   "painting.frostbite.plant.title": "Plant Painting",
@@ -31,5 +37,5 @@
   "key.frostbite.opengui": "FrostBite GUI",
   "key.frostbite.drink_water": "Drink Water Key",
 
-  "itemgroup.citrine": "Citrine Item Group"
+  "itemgroup.arktirium": "Arktirium"
 }

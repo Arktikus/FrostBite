@@ -12,12 +12,12 @@ import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 
 public class ModItemGroup {
-    public static final RegistryKey<ItemGroup> CITRINE = RegistryKey.of(RegistryKeys.ITEM_GROUP, new Identifier(FrostBite.MOD_ID, "citrine"));
+    public static final RegistryKey<ItemGroup> ARKTIRIUM = RegistryKey.of(RegistryKeys.ITEM_GROUP, new Identifier(FrostBite.MOD_ID, "arktirium"));
 
     public static void registerItemGroups() {
-        Registry.register(Registries.ITEM_GROUP, CITRINE, FabricItemGroup.builder()
-                .icon(() -> new ItemStack(ModItems.CITRINE))
-                .displayName(Text.translatable("itemgroup.citrine"))
+        Registry.register(Registries.ITEM_GROUP, ARKTIRIUM, FabricItemGroup.builder()
+                .icon(() -> new ItemStack(ModItems.ARKTIRIUM))
+                .displayName(Text.translatable("itemgroup.arktirium"))
                 .build());
     }
 }

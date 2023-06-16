@@ -36,8 +36,8 @@ public class FrostBite implements ModInitializer {
 		ModWorldGeneration.generateModWorldGen();
 
 		ModFlammableBlockRegistry.registerFlammableBlocks();
-		StrippableBlockRegistry.register(ModBlocks.RED_MAPLE_LOG, ModBlocks.STRIPPED_RED_MAPLE_LOG); //TRANSFER TO OWN CLASS
-		StrippableBlockRegistry.register(ModBlocks.RED_MAPLE_WOOD, ModBlocks.STRIPPED_RED_MAPLE_WOOD); //TRANSFER TO OWN CLASS
+		StrippableBlockRegistry.register(ModBlocks.BLUE_ARCTIC_LOG, ModBlocks.STRIPPED_BLUE_ARCTIC_LOG); //TRANSFER TO OWN CLASS
+		StrippableBlockRegistry.register(ModBlocks.BLUE_ARCTIC_WOOD, ModBlocks.STRIPPED_BLUE_ARCTIC_WOOD); //TRANSFER TO OWN CLASS
 
 		ModPaintings.registerPaintings();
 

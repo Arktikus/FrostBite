@@ -1,8 +1,36 @@
 {
-  "item.frostbite.citrine": "Citrin",
-  "item.frostbite.raw_citrine": "Rohes Citrin",
+  "item.frostbite.arktirium": "Arktirium",
+  "item.frostbite.raw_arktirium": "Rohes Arktirium",
 
-  "block.frostbite.citrine_block": "Citrin Block",
+  "item.frostbite.tiger_spawn_egg": "Tiger Spawn Ei",
+  "item.frostbite.pinguin_spawn_egg": "Pinguin Spawn Ei",
+  "item.frostbite.shark_spawn_egg": "Shark Spawn Ei",
 
-  "itemgroup.citrine": "Citrine Gegenstand Gruppe"
+  "block.frostbite.arktirium_block": "Arktiriumblock",
+  "block.frostbite.arktirium_ore": "Arktiriumerz",
+  "block.frostbite.deepslate_arktirium_ore": "Tiefenschiefer-Arktiriumerz",
+
+  "block.frostbite.blue_arctic_log": "Blue Arctic Log",
+  "block.frostbite.blue_arctic_wood": "Blue Arctic Wood",
+  "block.frostbite.stripped_blue_arctic_log": "Stripped Blue Arctic Log",
+  "block.frostbite.stripped_blue_arctic_wood": "Stripped Blue Arctic Wood",
+  "block.frostbite.blue_arctic_planks": "Blue Arctic Planks",
+  "block.frostbite.blue_arctic_leaves": "Blue Arctic Leaves",
+  "block.frostbite.blue_arctic_sapling": "Blue Arctic Sapling",
+
+  "painting.frostbite.sunset.title": "Sunset Painting",
+  "painting.frostbite.plant.title": "Plant Painting",
+  "painting.frostbite.wanderer.title": "Wanderer Painting",
+  "painting.frostbite.sunset.author": "PlatinumG17",
+  "painting.frostbite.plant.author": "PlatinumG17",
+  "painting.frostbite.wanderer.author": "PlatinumG17",
+
+  "message.frostbite.drank_water": "Du hast Wasser getrunken!",
+  "message.frostbite.no_water": "Kein Wasser in der Nähe!",
+
+  "key.category.frostbite": "FrostBite Mod",
+  "key.frostbite.opengui": "FrostBite GUI",
+  "key.frostbite.drink_water": "Trink Wasser Taste",
+
+  "itemgroup.arktirium": "Arktirium Itemgruppe"
 }

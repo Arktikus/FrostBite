@@ -16,17 +16,20 @@ public class ModModelProvider extends FabricModelProvider {
 
     @Override
     public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
-        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.CITRINE_BLOCK);
-        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.CITRINE_ORE);
-        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.CITRINE_DEEPSLATE_ORE);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.ARKTIRIUM_BLOCK);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.ARKTIRIUM_ORE);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.DEEPSLATE_ARKTIRIUM_ORE);
 
-        blockStateModelGenerator.registerLog(ModBlocks.RED_MAPLE_LOG).log(ModBlocks.RED_MAPLE_LOG).wood(ModBlocks.RED_MAPLE_WOOD);
-        blockStateModelGenerator.registerLog(ModBlocks.STRIPPED_RED_MAPLE_LOG).log(ModBlocks.STRIPPED_RED_MAPLE_LOG).wood(ModBlocks.STRIPPED_RED_MAPLE_WOOD);
+        blockStateModelGenerator.registerLog(ModBlocks.BLUE_ARCTIC_LOG).log(ModBlocks.BLUE_ARCTIC_LOG).wood(ModBlocks.BLUE_ARCTIC_WOOD);
+        blockStateModelGenerator.registerLog(ModBlocks.STRIPPED_BLUE_ARCTIC_LOG).log(ModBlocks.STRIPPED_BLUE_ARCTIC_LOG).wood(ModBlocks.STRIPPED_BLUE_ARCTIC_WOOD);
 
-        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.RED_MAPLE_PLANKS);
-        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.RED_MAPLE_LEAVES);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.BLUE_ARCTIC_PLANKS).stairs(ModBlocks.BLUE_ARCTIC_STAIRS).slab(ModBlocks.BLUE_ARCTIC_SLAB);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.BLUE_ARCTIC_LEAVES);
 
-        blockStateModelGenerator.registerTintableCrossBlockState(ModBlocks.RED_MAPLE_SAPLING, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerTintableCrossBlockState(ModBlocks.BLUE_ARCTIC_SAPLING, BlockStateModelGenerator.TintType.NOT_TINTED);
+
+        blockStateModelGenerator.registerDoor(ModBlocks.BLUE_ARCTIC_DOOR);
+        blockStateModelGenerator.registerTrapdoor(ModBlocks.BLUE_ARCTIC_TRAPDOOR);
 
         blockStateModelGenerator.registerParentedItemModel(ModItems.TIGER_SPAWN_EGG, ModelIds.getMinecraftNamespacedItem("template_spawn_egg"));
         blockStateModelGenerator.registerParentedItemModel(ModItems.PINGUIN_SPAWN_EGG, ModelIds.getMinecraftNamespacedItem("template_spawn_egg"));
@@ -35,7 +38,9 @@ public class ModModelProvider extends FabricModelProvider {
 
     @Override
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
-        itemModelGenerator.register(ModItems.CITRINE, Models.GENERATED);
-        itemModelGenerator.register(ModItems.RAW_CITRINE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.ARKTIRIUM, Models.GENERATED);
+        itemModelGenerator.register(ModItems.RAW_ARKTIRIUM, Models.GENERATED);
+        itemModelGenerator.register(ModItems.BLUE_ARCTIC_STICK, Models.GENERATED);
+
     }
 }

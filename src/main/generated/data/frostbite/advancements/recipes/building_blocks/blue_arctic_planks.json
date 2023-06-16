@@ -1,0 +1,87 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_blue_arctic_log": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "frostbite:blue_arctic_log"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_blue_arctic_planks": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "frostbite:blue_arctic_planks"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_blue_arctic_wood": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "frostbite:blue_arctic_wood"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_stripped_blue_arctic_log": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "frostbite:stripped_blue_arctic_log"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_stripped_blue_arctic_wood": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "frostbite:stripped_blue_arctic_wood"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:blue_arctic_planks"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_blue_arctic_log",
+      "has_blue_arctic_wood",
+      "has_stripped_blue_arctic_log",
+      "has_stripped_blue_arctic_wood",
+      "has_blue_arctic_planks",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:blue_arctic_planks"
+    ]
+  },
+  "sends_telemetry_event": false
+}
