@@ -26,16 +26,4 @@ public class SharkModel extends GeoModel<SharkEntity> {
     public Identifier getAnimationResource(SharkEntity animatable) {
         return new Identifier(FrostBite.MOD_ID, "animations/shark.animation.json");
     }
-
-    /*@Override
-    public void setCustomAnimations(SharkEntity animatable, long instanceId, AnimationState<SharkEntity> animationState) { //TODO MAYBE REMOVE
-        CoreGeoBone head = getAnimationProcessor().getBone("head");
-
-        if (head != null) {
-            EntityModelData entityData = animationState.getData(DataTickets.ENTITY_MODEL_DATA);
-            head.setRotX(entityData.headPitch() * MathHelper.RADIANS_PER_DEGREE);
-            head.setRotY(entityData.netHeadYaw() * MathHelper.RADIANS_PER_DEGREE);
-        }
-    } */
-
 }

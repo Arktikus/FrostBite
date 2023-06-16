@@ -76,6 +76,20 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                         FabricRecipeProvider.conditionsFromItem(ModBlocks.BLUE_ARCTIC_PLANKS))
                         .offerTo(exporter, new Identifier(FabricRecipeProvider.getRecipeName(Blocks.CRAFTING_TABLE)));
 
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, Blocks.LADDER, 3)
+                .pattern("# #")
+                .pattern("###")
+                .pattern("# #")
+                .input('#', ModItems.BLUE_ARCTIC_STICK)
+                //.input('a', Blocks.AIR)
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.BLUE_ARCTIC_LOG),
+                        FabricRecipeProvider.conditionsFromItem(ModBlocks.BLUE_ARCTIC_LOG))
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.BLUE_ARCTIC_WOOD),
+                        FabricRecipeProvider.conditionsFromItem(ModBlocks.BLUE_ARCTIC_WOOD))
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.BLUE_ARCTIC_PLANKS),
+                        FabricRecipeProvider.conditionsFromItem(ModBlocks.BLUE_ARCTIC_PLANKS))
+                .offerTo(exporter, new Identifier(FabricRecipeProvider.getRecipeName(Blocks.LADDER)));
+
         offerReversibleCompactingRecipes(exporter, RecipeCategory.BUILDING_BLOCKS, ModItems.ARKTIRIUM, RecipeCategory.MISC,
                 ModBlocks.ARKTIRIUM_BLOCK);
     }

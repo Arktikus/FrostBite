@@ -52,6 +52,6 @@ public class ModLootTableGenerator extends FabricBlockLootTableProvider {
 
         //BlockLootTableGenerator.dropsWithSilkTouch(ModBlocks.BLUE_ARCTIC_LEAVES, ((LeafEntry.Builder)this.addSurvivesExplosionCondition(ModBlocks.BLUE_ARCTIC_LEAVES, ItemEntry.builder(ModItems.BLUE_ARCTIC_STICK))).conditionally(TableBonusLootCondition.builder(Enchantments.FORTUNE, 0.01f))).pool(LootPool.builder().rolls(ConstantLootNumberProvider.create(1.0f)).conditionally(WITH_SILK_TOUCH_OR_SHEARS).with((LootPoolEntry.Builder<?>)((LeafEntry.Builder)this.applyExplosionDecay(ModBlocks.BLUE_ARCTIC_LEAVES, ItemEntry.builder(ModItems.BLUE_ARCTIC_STICK).apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 2.0f)))).conditionally(TableBonusLootCondition.builder(Enchantments.FORTUNE, 0.01f)))));
 
-        //addDrop(ModBlocks.BLUE_ARCTIC_LEAVES, oakLeavesDrops(ModBlocks.BLUE_ARCTIC_LEAVES, ModBlocks.BLUE_ARCTIC_SAPLING, 0.03f)); //TODO Don't know the difference
+        //addDrop(ModBlocks.BLUE_ARCTIC_LEAVES, oakLeavesDrops(ModBlocks.BLUE_ARCTIC_LEAVES, ModBlocks.BLUE_ARCTIC_SAPLING, 0.03f));
     }
 }
