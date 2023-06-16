@@ -6,6 +6,7 @@ import me.arktikus.frostbite.util.ModTags;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.minecraft.block.Block;
+import net.minecraft.block.Blocks;
 import net.minecraft.data.server.recipe.RecipeJsonProvider;
 import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
 import net.minecraft.data.server.recipe.ShapelessRecipeJsonBuilder;
@@ -35,21 +36,6 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
 
         //TODO - Further Testing needed
 
-        /* ShapelessRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.BLUE_ARCTIC_PLANKS, 4)
-                        .input((TagKey) ModTags.Blocks.BLUE_ARCTIC_LOGS) //SHOULD WORK
-                .group("planks")
-                .criterion(FabricRecipeProvider.hasItem(ModBlocks.BLUE_ARCTIC_LOG),
-                        FabricRecipeProvider.conditionsFromItem(ModBlocks.BLUE_ARCTIC_LOG))
-                .criterion(FabricRecipeProvider.hasItem(ModBlocks.BLUE_ARCTIC_WOOD),
-                        FabricRecipeProvider.conditionsFromItem(ModBlocks.BLUE_ARCTIC_WOOD))
-                .criterion(FabricRecipeProvider.hasItem(ModBlocks.STRIPPED_BLUE_ARCTIC_LOG),
-                        FabricRecipeProvider.conditionsFromItem(ModBlocks.STRIPPED_BLUE_ARCTIC_LOG))
-                .criterion(FabricRecipeProvider.hasItem(ModBlocks.STRIPPED_BLUE_ARCTIC_WOOD),
-                        FabricRecipeProvider.conditionsFromItem(ModBlocks.STRIPPED_BLUE_ARCTIC_WOOD))
-                .criterion(FabricRecipeProvider.hasItem(ModBlocks.BLUE_ARCTIC_PLANKS),
-                        FabricRecipeProvider.conditionsFromItem(ModBlocks.BLUE_ARCTIC_PLANKS))
-                                .offerTo(exporter, new Identifier(FabricRecipeProvider.getRecipeName(ModBlocks.BLUE_ARCTIC_PLANKS))); */ //TODO SOMEHOW STOPPED WORKING
-
         ShapelessRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS,ModBlocks.BLUE_ARCTIC_PLANKS, 4)
                         .input(ModTags.Items.BLUE_ARCTIC_LOGS)
                                 .group("planks")
@@ -77,6 +63,18 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                 .criterion(FabricRecipeProvider.hasItem(ModBlocks.BLUE_ARCTIC_PLANKS),
                         FabricRecipeProvider.conditionsFromItem(ModBlocks.BLUE_ARCTIC_PLANKS))
                         .offerTo(exporter, new Identifier(FabricRecipeProvider.getRecipeName(ModItems.BLUE_ARCTIC_STICK)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, Blocks.CRAFTING_TABLE)
+                        .pattern("##")
+                        .pattern("##")
+                .input('#', ModTags.Items.PLANKS)
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.BLUE_ARCTIC_LOG),
+                        FabricRecipeProvider.conditionsFromItem(ModBlocks.BLUE_ARCTIC_LOG))
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.BLUE_ARCTIC_WOOD),
+                        FabricRecipeProvider.conditionsFromItem(ModBlocks.BLUE_ARCTIC_WOOD))
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.BLUE_ARCTIC_PLANKS),
+                        FabricRecipeProvider.conditionsFromItem(ModBlocks.BLUE_ARCTIC_PLANKS))
+                        .offerTo(exporter, new Identifier(FabricRecipeProvider.getRecipeName(Blocks.CRAFTING_TABLE)));
 
         offerReversibleCompactingRecipes(exporter, RecipeCategory.BUILDING_BLOCKS, ModItems.ARKTIRIUM, RecipeCategory.MISC,
                 ModBlocks.ARKTIRIUM_BLOCK);

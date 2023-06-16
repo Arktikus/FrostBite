@@ -27,6 +27,8 @@ public class ModTags {
 
         public static final TagKey<Item> BLUE_ARCTIC_STICKS = createTag("blue_arctic_sticks");
 
+        public static final TagKey<Item> PLANKS = createCommonTag("planks");
+
         private static TagKey<Item> createTag(String name) {
             return TagKey.of(RegistryKeys.ITEM, new Identifier(FrostBite.MOD_ID, name));
         }

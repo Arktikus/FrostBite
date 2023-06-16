@@ -32,10 +32,10 @@ public class ModConfiguredFeatures {
 
         register(context, BLUE_ARCTIC_KEY, Feature.TREE, new TreeFeatureConfig.Builder(
                 BlockStateProvider.of(ModBlocks.BLUE_ARCTIC_LOG),
-                new StraightTrunkPlacer(5, 6, 3),
+                new StraightTrunkPlacer(5, 6, 3), // ChatGPT said: The 5 (represented by i) corresponds to the base height of the tree trunk. It determines the number of blocks the trunk will extend upwards from the ground. The 6 (represented by j) is the height randomization value. It specifies the maximum additional height that can be randomly added to the base height of the trunk. In this case, it means the trunk's final height can vary by up to 6 blocks more than the base height. The 3 (represented by k) is the tapering value, which determines how much the tree trunk narrows as it extends upwards. A higher value will result in a more gradual tapering effect.
                 BlockStateProvider.of(ModBlocks.BLUE_ARCTIC_LEAVES),
-                new BlobFoliagePlacer(ConstantIntProvider.create(2), ConstantIntProvider.create(0), 4),
-                new TwoLayersFeatureSize(1, 0, 2)).build());
+                new BlobFoliagePlacer(ConstantIntProvider.create(2), ConstantIntProvider.create(0), 4), //ConstantIntProvider.create(2): This parameter likely determines the radius or spread of the foliage blobs. A higher value would result in larger and more spread-out foliage clusters, while a lower value would lead to smaller and more compact foliage clusters. ConstantIntProvider.create(0): This parameter could represent an offset or additional randomness applied to the foliage placement. A non-zero value would introduce some random variation in the positioning of the foliage within the specified range.
+                new TwoLayersFeatureSize(1, 0, 2)).build()); //The first parameter 1: This parameter likely represents the base height or size of the tree feature. It determines the minimum number of layers or blocks the tree will have in height. The second parameter 0: This parameter could indicate an additional randomization or variability in the height of the tree feature. A non-zero value would introduce some random variation to the height, allowing the tree to generate with a slightly different height each time. The third parameter 2: This parameter may represent the radius or spread of the tree feature. It determines the extent of the tree's canopy or foliage clusters horizontally. A higher value would result in a wider or more spread-out canopy, while a lower value would lead to a more compact canopy.
 
         register(context, ARKTIRIUM_ORE_KEY, Feature.ORE, new OreFeatureConfig(overworldArktiriumOres, 4)); //ROUGH CHUNK SIZE
     }
