@@ -20,6 +20,8 @@ public class FrostBiteClient implements ClientModInitializer {
     public void onInitializeClient() {
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.BLUE_ARCTIC_LEAVES, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.BLUE_ARCTIC_SAPLING, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.BLUE_ARCTIC_DOOR, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.BLUE_ARCTIC_TRAPDOOR, RenderLayer.getCutout());
 
         EntityRendererRegistry.register(ModEntities.TIGER, TigerRenderer::new);
         EntityRendererRegistry.register(ModEntities.PINGUIN, PinguinRenderer::new);

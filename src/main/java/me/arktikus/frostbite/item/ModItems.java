@@ -41,7 +41,11 @@ public class ModItems {
     public static void addItemsToItemGroup() {
         addToItemGroup(ItemGroups.INGREDIENTS, ARKTIRIUM);
         addToItemGroup(ItemGroups.INGREDIENTS, RAW_ARKTIRIUM);
-        addToItemGroup(ItemGroups.INGREDIENTS, BLUE_ARCTIC_STICK); //TODO CHECK IF IT'S THE RIGHT ONE
+        addToItemGroup(ItemGroups.INGREDIENTS, BLUE_ARCTIC_STICK);
+
+        addToItemGroup(ItemGroups.SPAWN_EGGS, TIGER_SPAWN_EGG);
+        addToItemGroup(ItemGroups.SPAWN_EGGS, PINGUIN_SPAWN_EGG);
+        addToItemGroup(ItemGroups.SPAWN_EGGS, SHARK_SPAWN_EGG);
 
         addToItemGroup(ModItemGroup.ARKTIRIUM, ARKTIRIUM);
         addToItemGroup(ModItemGroup.ARKTIRIUM, RAW_ARKTIRIUM);

@@ -1,6 +1,9 @@
 package me.arktikus.frostbite.block;
 
 import me.arktikus.frostbite.FrostBite;
+import me.arktikus.frostbite.block.custom.ModDoorBlock;
+import me.arktikus.frostbite.block.custom.ModStairsBlock;
+import me.arktikus.frostbite.block.custom.ModTrapdoorBlock;
 import me.arktikus.frostbite.item.ModItemGroup;
 import me.arktikus.frostbite.sound.ModSounds;
 import me.arktikus.frostbite.world.tree.BlueArcticSaplingGenerator;
@@ -48,6 +51,20 @@ public class ModBlocks {
 
     public static final Block BLUE_ARCTIC_SAPLING = registerBlock("blue_arctic_sapling",
             new SaplingBlock(new BlueArcticSaplingGenerator(), FabricBlockSettings.copyOf(Blocks.OAK_SAPLING).strength(4.0f).requiresTool()), ModItemGroup.ARKTIRIUM);
+
+    public static final Block BLUE_ARCTIC_STAIRS = registerBlock("blue_arctic_stairs",
+            new ModStairsBlock(ModBlocks.BLUE_ARCTIC_PLANKS.getDefaultState(),
+                    FabricBlockSettings.copyOf(ModBlocks.BLUE_ARCTIC_PLANKS).strength(1.0f).requiresTool()), ModItemGroup.ARKTIRIUM);
+
+    public static final Block BLUE_ARCTIC_SLAB = registerBlock("blue_arctic_slab",
+            new SlabBlock(FabricBlockSettings.copyOf(ModBlocks.BLUE_ARCTIC_PLANKS).strength(1.0f).requiresTool()), ModItemGroup.ARKTIRIUM);
+
+    public static final Block BLUE_ARCTIC_DOOR = registerBlock("blue_arctic_door",
+            new ModDoorBlock(FabricBlockSettings.copyOf(ModBlocks.BLUE_ARCTIC_PLANKS).strength(1.0f).requiresTool().nonOpaque(), BlockSetType.OAK), ModItemGroup.ARKTIRIUM);
+
+    public static final Block BLUE_ARCTIC_TRAPDOOR = registerBlock("blue_arctic_trapdoor",
+            new ModTrapdoorBlock(FabricBlockSettings.copyOf(ModBlocks.BLUE_ARCTIC_PLANKS).strength(1.0f).requiresTool().nonOpaque() ,BlockSetType.OAK), ModItemGroup.ARKTIRIUM);
+
 
     private static Block registerBlock(String name, Block block, RegistryKey<ItemGroup> group) {
         registerBlockItem(name, block, group);

@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "frostbite:block/blue_arctic_slab"
+    },
+    "type=double": {
+      "model": "frostbite:block/blue_arctic_planks"
+    },
+    "type=top": {
+      "model": "frostbite:block/blue_arctic_slab_top"
+    }
+  }
+}

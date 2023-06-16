@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/door_bottom_left_open",
+  "textures": {
+    "bottom": "frostbite:block/blue_arctic_door_bottom",
+    "top": "frostbite:block/blue_arctic_door_top"
+  }
+}

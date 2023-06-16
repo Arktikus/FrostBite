@@ -12,7 +12,7 @@ public class ModFlammableBlockRegistry {
         registry.add(ModBlocks.STRIPPED_BLUE_ARCTIC_WOOD, 5, 5);
 
         registry.add(ModBlocks.BLUE_ARCTIC_LEAVES, 30, 60);
-        registry.add(ModBlocks.BLUE_ARCTIC_LEAVES, 5, 20);
+        registry.add(ModBlocks.BLUE_ARCTIC_PLANKS, 5, 20);
 
     }
 }

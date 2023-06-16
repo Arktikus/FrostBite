@@ -22,7 +22,7 @@ public class SharkRenderer extends GeoEntityRenderer<SharkEntity> {
     @Override
     public void render(SharkEntity entity, float entityYaw, float partialTick, MatrixStack poseStack, VertexConsumerProvider bufferSource, int packedLight) {
         if(entity.isBaby()) {
-            poseStack.scale(0.4f, 0.4f, 0.4f);
+            poseStack.scale(0.4f, 0.4f, 0.4f); //TODO REMOVE? THERE ARE NO MONSTER BABYS
         }
         super.render(entity, entityYaw, partialTick, poseStack, bufferSource, packedLight);
     }
