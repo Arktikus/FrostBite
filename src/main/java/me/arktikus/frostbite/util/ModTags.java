@@ -10,6 +10,7 @@ import net.minecraft.util.Identifier;
 public class ModTags {
     public static class Blocks {
         public static final TagKey<Block> BLUE_ARCTIC_LOGS = createTag("blue_arctic_logs");
+
         public static final TagKey<Block> PLANKS = createCommonTag("planks");
 
         private static TagKey<Block> createTag(String name) {
@@ -22,6 +23,8 @@ public class ModTags {
     }
 
     public static class Items {
+        public static final TagKey<Item> BLUE_ARCTIC_LOGS = createTag("blue_arctic_logs");
+
         public static final TagKey<Item> BLUE_ARCTIC_STICKS = createTag("blue_arctic_sticks");
 
         private static TagKey<Item> createTag(String name) {

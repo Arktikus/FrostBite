@@ -35,26 +35,35 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
 
         //TODO - Further Testing needed
 
-        /* ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.BLUE_ARCTIC_STICK)
-                        .input(ModBlocks.BLUE_ARCTIC_PLANKS)
-                .criterion(FabricRecipeProvider.hasItem(ModBlocks.BLUE_ARCTIC_LOG),
-                        FabricRecipeProvider.conditionsFromItem(ModBlocks.BLUE_ARCTIC_LOG))
-                                .criterion(FabricRecipeProvider.hasItem(ModBlocks.BLUE_ARCTIC_WOOD),
-                        FabricRecipeProvider.conditionsFromItem(ModBlocks.BLUE_ARCTIC_WOOD))
-                .criterion(FabricRecipeProvider.hasItem(ModBlocks.BLUE_ARCTIC_PLANKS),
-                        FabricRecipeProvider.conditionsFromItem(ModBlocks.BLUE_ARCTIC_PLANKS))
-                        .offerTo(exporter, new Identifier(FabricRecipeProvider.getRecipeName(ModItems.BLUE_ARCTIC_STICK))); */
-
-        ShapelessRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.BLUE_ARCTIC_PLANKS, 4)
+        /* ShapelessRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.BLUE_ARCTIC_PLANKS, 4)
                         .input((TagKey) ModTags.Blocks.BLUE_ARCTIC_LOGS) //SHOULD WORK
                 .group("planks")
                 .criterion(FabricRecipeProvider.hasItem(ModBlocks.BLUE_ARCTIC_LOG),
                         FabricRecipeProvider.conditionsFromItem(ModBlocks.BLUE_ARCTIC_LOG))
                 .criterion(FabricRecipeProvider.hasItem(ModBlocks.BLUE_ARCTIC_WOOD),
                         FabricRecipeProvider.conditionsFromItem(ModBlocks.BLUE_ARCTIC_WOOD))
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.STRIPPED_BLUE_ARCTIC_LOG),
+                        FabricRecipeProvider.conditionsFromItem(ModBlocks.STRIPPED_BLUE_ARCTIC_LOG))
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.STRIPPED_BLUE_ARCTIC_WOOD),
+                        FabricRecipeProvider.conditionsFromItem(ModBlocks.STRIPPED_BLUE_ARCTIC_WOOD))
                 .criterion(FabricRecipeProvider.hasItem(ModBlocks.BLUE_ARCTIC_PLANKS),
                         FabricRecipeProvider.conditionsFromItem(ModBlocks.BLUE_ARCTIC_PLANKS))
-                                .offerTo(exporter, new Identifier(FabricRecipeProvider.getRecipeName(ModBlocks.BLUE_ARCTIC_PLANKS)));
+                                .offerTo(exporter, new Identifier(FabricRecipeProvider.getRecipeName(ModBlocks.BLUE_ARCTIC_PLANKS))); */ //TODO SOMEHOW STOPPED WORKING
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS,ModBlocks.BLUE_ARCTIC_PLANKS, 4)
+                        .input(ModTags.Items.BLUE_ARCTIC_LOGS)
+                                .group("planks")
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.BLUE_ARCTIC_LOG),
+                        FabricRecipeProvider.conditionsFromItem(ModBlocks.BLUE_ARCTIC_LOG))
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.BLUE_ARCTIC_WOOD),
+                        FabricRecipeProvider.conditionsFromItem(ModBlocks.BLUE_ARCTIC_WOOD))
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.STRIPPED_BLUE_ARCTIC_LOG),
+                        FabricRecipeProvider.conditionsFromItem(ModBlocks.STRIPPED_BLUE_ARCTIC_LOG))
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.STRIPPED_BLUE_ARCTIC_WOOD),
+                        FabricRecipeProvider.conditionsFromItem(ModBlocks.STRIPPED_BLUE_ARCTIC_WOOD))
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.BLUE_ARCTIC_PLANKS),
+                        FabricRecipeProvider.conditionsFromItem(ModBlocks.BLUE_ARCTIC_PLANKS))
+                        .offerTo(exporter, new Identifier(FabricRecipeProvider.getRecipeName(ModBlocks.BLUE_ARCTIC_PLANKS)));
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.BLUE_ARCTIC_STICK, 4)
                         .pattern("#")
@@ -68,11 +77,6 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                 .criterion(FabricRecipeProvider.hasItem(ModBlocks.BLUE_ARCTIC_PLANKS),
                         FabricRecipeProvider.conditionsFromItem(ModBlocks.BLUE_ARCTIC_PLANKS))
                         .offerTo(exporter, new Identifier(FabricRecipeProvider.getRecipeName(ModItems.BLUE_ARCTIC_STICK)));
-
-
-
-
-
 
         offerReversibleCompactingRecipes(exporter, RecipeCategory.BUILDING_BLOCKS, ModItems.ARKTIRIUM, RecipeCategory.MISC,
                 ModBlocks.ARKTIRIUM_BLOCK);

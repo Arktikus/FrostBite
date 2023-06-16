@@ -1,5 +1,5 @@
 {
-  "replace": false,
+  "replaceable": false,
   "values": [
     "frostbite:blue_arctic_log",
     "frostbite:blue_arctic_wood",
