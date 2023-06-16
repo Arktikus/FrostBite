@@ -1,4 +1,4 @@
-// 1.20	2023-06-15T05:41:58.4396273	Frostbite/Model Definitions
+// 1.20	2023-06-16T06:23:32.0710102	Frostbite/Model Definitions
 5b394f506ac59d8c47d1e1f04faeb98a1049eaad assets\frostbite\models\item\stripped_blue_arctic_wood.json
 b3e6cf4ef1454383f72eacf0c90cacc0ec859169 assets\frostbite\models\block\blue_arctic_sapling.json
 37eb71dc8328059b44271fc53a048e3fe0f2c6f7 assets\frostbite\models\block\stripped_blue_arctic_log_horizontal.json
@@ -26,6 +26,7 @@ c63c5b08655488b0a51bc98ce05bd44efca2f07f assets\frostbite\models\item\blue_arcti
 7c93f47de3538cbc9fddc09958a36a985acfcead assets\frostbite\blockstates\blue_arctic_log.json
 8b2b3e6fa8ef5f9fc9aa3fcefb094c1a44568c37 assets\frostbite\models\item\arktirium_ore.json
 53dccd7707852254e8ad2688238e5f7000e7e3b9 assets\frostbite\blockstates\blue_arctic_leaves.json
+0b019ed438d9bce1dff46655a85476acde32a3e3 assets\frostbite\models\item\blue_arctic_stick.json
 e42abf2b3fe59eb10cd606c4a6cc99dcd832a91b assets\frostbite\models\item\blue_arctic_log.json
 9e2bdd87778576df2ef2f7597b65cb0f887d7b0b assets\frostbite\blockstates\blue_arctic_sapling.json
 7ce89d87e5f9d2dcfab8f557a3d07a99a4a4a951 assets\frostbite\models\item\blue_arctic_planks.json

@@ -18,6 +18,8 @@ public class ModItems {
             new Item(new FabricItemSettings()));
     public static final Item RAW_ARKTIRIUM = registerItem("raw_arktirium",
             new Item(new FabricItemSettings()));
+    public static final Item BLUE_ARCTIC_STICK = registerItem("blue_arctic_stick",
+            new Item(new FabricItemSettings()));
 
     public static final Item TIGER_SPAWN_EGG = registerItem("tiger_spawn_egg",
             new SpawnEggItem(ModEntities.TIGER, 0xD57E36, 0x1D0D00,
@@ -39,9 +41,11 @@ public class ModItems {
     public static void addItemsToItemGroup() {
         addToItemGroup(ItemGroups.INGREDIENTS, ARKTIRIUM);
         addToItemGroup(ItemGroups.INGREDIENTS, RAW_ARKTIRIUM);
+        addToItemGroup(ItemGroups.INGREDIENTS, BLUE_ARCTIC_STICK); //TODO CHECK IF IT'S THE RIGHT ONE
 
         addToItemGroup(ModItemGroup.ARKTIRIUM, ARKTIRIUM);
         addToItemGroup(ModItemGroup.ARKTIRIUM, RAW_ARKTIRIUM);
+        addToItemGroup(ModItemGroup.ARKTIRIUM, BLUE_ARCTIC_STICK);
 
         addToItemGroup(ModItemGroup.ARKTIRIUM, TIGER_SPAWN_EGG);
         addToItemGroup(ModItemGroup.ARKTIRIUM, PINGUIN_SPAWN_EGG);

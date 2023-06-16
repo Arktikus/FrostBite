@@ -1,11 +1,11 @@
 {
-  "type": "minecraft:blasting",
+  "type": "minecraft:smelting",
   "category": "misc",
-  "cookingtime": 100,
+  "cookingtime": 200,
   "experience": 0.7,
   "group": "citrine",
   "ingredient": {
     "item": "frostbite:raw_arktirium"
   },
-  "result": "frostbite:raw_arktirium"
+  "result": "frostbite:arktirium"
 }

@@ -11,6 +11,7 @@ import net.minecraft.block.*;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
+import net.minecraft.item.ItemGroups;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryKey;
@@ -32,18 +33,18 @@ public class ModBlocks {
                     UniformIntProvider.create(3, 7)), ModItemGroup.ARKTIRIUM);
 
     public static final Block BLUE_ARCTIC_LOG = registerBlock("blue_arctic_log",
-            new PillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_LOG).strength(4.0f).requiresTool()), ModItemGroup.ARKTIRIUM);
+            new PillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_LOG).strength(2.0f).requiresTool()), ModItemGroup.ARKTIRIUM);
     public static final Block BLUE_ARCTIC_WOOD = registerBlock("blue_arctic_wood",
-            new PillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_WOOD).strength(4.0f).requiresTool()), ModItemGroup.ARKTIRIUM);
+            new PillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_WOOD).strength(2.0f).requiresTool()), ModItemGroup.ARKTIRIUM);
     public static final Block STRIPPED_BLUE_ARCTIC_LOG = registerBlock("stripped_blue_arctic_log",
-            new PillarBlock(FabricBlockSettings.copyOf(Blocks.STRIPPED_OAK_LOG).strength(4.0f).requiresTool()), ModItemGroup.ARKTIRIUM);
+            new PillarBlock(FabricBlockSettings.copyOf(Blocks.STRIPPED_OAK_LOG).strength(2.0f).requiresTool()), ModItemGroup.ARKTIRIUM);
     public static final Block STRIPPED_BLUE_ARCTIC_WOOD = registerBlock("stripped_blue_arctic_wood",
-            new PillarBlock(FabricBlockSettings.copyOf(Blocks.STRIPPED_OAK_WOOD).strength(4.0f).requiresTool()), ModItemGroup.ARKTIRIUM);
+            new PillarBlock(FabricBlockSettings.copyOf(Blocks.STRIPPED_OAK_WOOD).strength(2.0f).requiresTool()), ModItemGroup.ARKTIRIUM);
 
     public static final Block BLUE_ARCTIC_PLANKS = registerBlock("blue_arctic_planks",
-            new Block(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS).strength(4.0f).requiresTool()), ModItemGroup.ARKTIRIUM);
+            new Block(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS).strength(2.0f).requiresTool()), ModItemGroup.ARKTIRIUM);
     public static final Block BLUE_ARCTIC_LEAVES = registerBlock("blue_arctic_leaves",
-            new LeavesBlock(FabricBlockSettings.copyOf(Blocks.OAK_LEAVES).strength(1.0f)), ModItemGroup.ARKTIRIUM);
+            new LeavesBlock(FabricBlockSettings.copyOf(Blocks.OAK_LEAVES).strength(0.3f)), ModItemGroup.ARKTIRIUM);
 
     public static final Block BLUE_ARCTIC_SAPLING = registerBlock("blue_arctic_sapling",
             new SaplingBlock(new BlueArcticSaplingGenerator(), FabricBlockSettings.copyOf(Blocks.OAK_SAPLING).strength(4.0f).requiresTool()), ModItemGroup.ARKTIRIUM);
@@ -61,7 +62,28 @@ public class ModBlocks {
         return item;
     }
 
+    public static void addBlocksToItemGroup() {
+        addToItemGroup(ItemGroups.BUILDING_BLOCKS, ModBlocks.ARKTIRIUM_BLOCK);
+        addToItemGroup(ItemGroups.BUILDING_BLOCKS, ModBlocks.BLUE_ARCTIC_LOG);
+        addToItemGroup(ItemGroups.BUILDING_BLOCKS, ModBlocks.BLUE_ARCTIC_WOOD);
+        addToItemGroup(ItemGroups.BUILDING_BLOCKS, ModBlocks.STRIPPED_BLUE_ARCTIC_LOG);
+        addToItemGroup(ItemGroups.BUILDING_BLOCKS, ModBlocks.STRIPPED_BLUE_ARCTIC_WOOD);
+        addToItemGroup(ItemGroups.BUILDING_BLOCKS, ModBlocks.BLUE_ARCTIC_PLANKS);
+
+        addToItemGroup(ItemGroups.NATURAL, ModBlocks.ARKTIRIUM_ORE);
+        addToItemGroup(ItemGroups.NATURAL, ModBlocks.DEEPSLATE_ARKTIRIUM_ORE);
+        addToItemGroup(ItemGroups.NATURAL, ModBlocks.BLUE_ARCTIC_LEAVES);
+        addToItemGroup(ItemGroups.NATURAL, ModBlocks.BLUE_ARCTIC_SAPLING);
+
+    }
+
+    private static void addToItemGroup(RegistryKey<ItemGroup> group, Block block) {
+        ItemGroupEvents.modifyEntriesEvent(group).register(entries -> entries.add(block));
+    }
+
     public static void registerModBlocks() {
         FrostBite.LOGGER.info("Registering Mod Blocks for " + FrostBite.MOD_ID);
+
+        addBlocksToItemGroup();
     }
 }
