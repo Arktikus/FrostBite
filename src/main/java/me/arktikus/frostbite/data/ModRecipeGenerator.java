@@ -12,6 +12,7 @@ import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
 import net.minecraft.data.server.recipe.ShapelessRecipeJsonBuilder;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemConvertible;
+import net.minecraft.item.Items;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.recipe.book.RecipeCategory;
 import net.minecraft.registry.tag.TagBuilder;
@@ -56,10 +57,6 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                         .pattern("#")
                 .input('#', ModBlocks.BLUE_ARCTIC_PLANKS)
                                 .group("sticks")
-                .criterion(FabricRecipeProvider.hasItem(ModBlocks.BLUE_ARCTIC_LOG),
-                        FabricRecipeProvider.conditionsFromItem(ModBlocks.BLUE_ARCTIC_LOG))
-                .criterion(FabricRecipeProvider.hasItem(ModBlocks.BLUE_ARCTIC_WOOD),
-                        FabricRecipeProvider.conditionsFromItem(ModBlocks.BLUE_ARCTIC_WOOD))
                 .criterion(FabricRecipeProvider.hasItem(ModBlocks.BLUE_ARCTIC_PLANKS),
                         FabricRecipeProvider.conditionsFromItem(ModBlocks.BLUE_ARCTIC_PLANKS))
                         .offerTo(exporter, new Identifier(FabricRecipeProvider.getRecipeName(ModItems.BLUE_ARCTIC_STICK)));
@@ -68,10 +65,6 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                         .pattern("##")
                         .pattern("##")
                 .input('#', ModTags.Items.PLANKS)
-                .criterion(FabricRecipeProvider.hasItem(ModBlocks.BLUE_ARCTIC_LOG),
-                        FabricRecipeProvider.conditionsFromItem(ModBlocks.BLUE_ARCTIC_LOG))
-                .criterion(FabricRecipeProvider.hasItem(ModBlocks.BLUE_ARCTIC_WOOD),
-                        FabricRecipeProvider.conditionsFromItem(ModBlocks.BLUE_ARCTIC_WOOD))
                 .criterion(FabricRecipeProvider.hasItem(ModBlocks.BLUE_ARCTIC_PLANKS),
                         FabricRecipeProvider.conditionsFromItem(ModBlocks.BLUE_ARCTIC_PLANKS))
                         .offerTo(exporter, new Identifier(FabricRecipeProvider.getRecipeName(Blocks.CRAFTING_TABLE)));
@@ -82,13 +75,34 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                 .pattern("# #")
                 .input('#', ModItems.BLUE_ARCTIC_STICK)
                 //.input('a', Blocks.AIR)
-                .criterion(FabricRecipeProvider.hasItem(ModBlocks.BLUE_ARCTIC_LOG),
-                        FabricRecipeProvider.conditionsFromItem(ModBlocks.BLUE_ARCTIC_LOG))
-                .criterion(FabricRecipeProvider.hasItem(ModBlocks.BLUE_ARCTIC_WOOD),
-                        FabricRecipeProvider.conditionsFromItem(ModBlocks.BLUE_ARCTIC_WOOD))
-                .criterion(FabricRecipeProvider.hasItem(ModBlocks.BLUE_ARCTIC_PLANKS),
-                        FabricRecipeProvider.conditionsFromItem(ModBlocks.BLUE_ARCTIC_PLANKS))
+                .criterion(FabricRecipeProvider.hasItem(ModItems.BLUE_ARCTIC_STICK),
+                        FabricRecipeProvider.conditionsFromItem(ModItems.BLUE_ARCTIC_STICK))
                 .offerTo(exporter, new Identifier(FabricRecipeProvider.getRecipeName(Blocks.LADDER)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.ARKTIRIUM_HAMMER)
+                .pattern("AAA")
+                .pattern("A#A")
+                .pattern(" # ")
+                .input('#', ModItems.BLUE_ARCTIC_STICK)
+                .input('A', ModItems.ARKTIRIUM)
+                .criterion(FabricRecipeProvider.hasItem(ModItems.ARKTIRIUM),
+                        FabricRecipeProvider.conditionsFromItem(ModItems.ARKTIRIUM))
+                .criterion(FabricRecipeProvider.hasItem(ModItems.BLUE_ARCTIC_STICK),
+                        FabricRecipeProvider.conditionsFromItem(ModItems.BLUE_ARCTIC_STICK))
+                .offerTo(exporter, new Identifier(FabricRecipeProvider.getRecipeName(ModItems.ARKTIRIUM_HAMMER)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.IRON_HAMMER)
+                .pattern("ABA")
+                .pattern("A#A")
+                .pattern(" # ")
+                .input('#', Items.STICK)
+                .input('A', Items.IRON_INGOT)
+                .input('B', Blocks.IRON_BLOCK)
+                .criterion(FabricRecipeProvider.hasItem(Items.IRON_INGOT),
+                        FabricRecipeProvider.conditionsFromItem(Items.IRON_INGOT))
+                .criterion(FabricRecipeProvider.hasItem(Items.STICK),
+                        FabricRecipeProvider.conditionsFromItem(Items.STICK))
+                .offerTo(exporter, new Identifier(FabricRecipeProvider.getRecipeName(ModItems.IRON_HAMMER)));
 
         offerReversibleCompactingRecipes(exporter, RecipeCategory.BUILDING_BLOCKS, ModItems.ARKTIRIUM, RecipeCategory.MISC,
                 ModBlocks.ARKTIRIUM_BLOCK);
