@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "#": {
+      "item": "frostbite:blue_arctic_stick"
+    },
+    "A": {
+      "item": "frostbite:arktirium"
+    }
+  },
+  "pattern": [
+    "AAA",
+    "A#A",
+    " # "
+  ],
+  "result": {
+    "item": "frostbite:arktirium_hammer"
+  },
+  "show_notification": true
+}

@@ -1,12 +1,24 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_blue_arctic_stick": {
+    "has_iron_ingot": {
       "conditions": {
         "items": [
           {
             "items": [
-              "frostbite:blue_arctic_stick"
+              "minecraft:iron_ingot"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_stick": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:stick"
             ]
           }
         ]
@@ -15,20 +27,21 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:ladder"
+        "recipe": "minecraft:iron_hammer"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_blue_arctic_stick",
+      "has_iron_ingot",
+      "has_stick",
       "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "minecraft:ladder"
+      "minecraft:iron_hammer"
     ]
   },
   "sends_telemetry_event": false

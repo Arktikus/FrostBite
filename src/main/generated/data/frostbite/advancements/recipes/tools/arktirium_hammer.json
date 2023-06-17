@@ -1,6 +1,18 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
+    "has_arktirium": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "frostbite:arktirium"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
     "has_blue_arctic_stick": {
       "conditions": {
         "items": [
@@ -15,20 +27,21 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:ladder"
+        "recipe": "minecraft:arktirium_hammer"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
+      "has_arktirium",
       "has_blue_arctic_stick",
       "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "minecraft:ladder"
+      "minecraft:arktirium_hammer"
     ]
   },
   "sends_telemetry_event": false

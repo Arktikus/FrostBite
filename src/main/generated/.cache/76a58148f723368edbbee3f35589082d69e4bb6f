@@ -1,4 +1,4 @@
-// 1.20	2023-06-17T00:26:41.7427747	Frostbite/Model Definitions
+// 1.20	2023-06-17T03:32:46.0782837	Frostbite/Model Definitions
 045f42d8dfbd42e0acbdaa737d8a21ee79581fae assets\frostbite\models\item\blue_arctic_door.json
 6088f2bac83964495bef8bf8759184c38f59e12c assets\frostbite\models\block\blue_arctic_door_top_right_open.json
 84e7dd4ad0b85383b6f6aa818179a8be7c4b7e7f assets\frostbite\models\block\blue_arctic_trapdoor_top.json
@@ -6,8 +6,8 @@ ec1834a45ac0eec5e60945b43e87f1794927f712 assets\frostbite\models\block\blue_arct
 37eb71dc8328059b44271fc53a048e3fe0f2c6f7 assets\frostbite\models\block\stripped_blue_arctic_log_horizontal.json
 7e2216135c8aa7cc3a6ca36e43ef5635c2c7a0b1 assets\frostbite\models\item\deepslate_arktirium_ore.json
 a5679a10f037e130e279410ebf341bed80cdc8f0 assets\frostbite\models\block\stripped_blue_arctic_log.json
-d4b4542944ce85e94d67122d01139c1246cf938b assets\frostbite\models\item\blue_arctic_trapdoor.json
 650d417019552d8cc7b91d8f723c6726abed415e assets\frostbite\models\block\blue_arctic_slab.json
+d4b4542944ce85e94d67122d01139c1246cf938b assets\frostbite\models\item\blue_arctic_trapdoor.json
 a74a6cbf4997e997a30865b41bfd4f3b0a563158 assets\frostbite\models\block\blue_arctic_trapdoor_open.json
 a1eac31380fe335b7ad787d6918535298193fbc4 assets\frostbite\models\block\blue_arctic_door_top_right.json
 014c3bbc7b48c32166a880fa54946f651c0f17d0 assets\frostbite\models\block\blue_arctic_door_top_left_open.json
