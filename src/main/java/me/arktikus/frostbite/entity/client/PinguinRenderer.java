@@ -1,3 +1,7 @@
+/*
+ * Copyright (C) 2023 Sören Wedig - All Rights Reserved
+ */
+
 package me.arktikus.frostbite.entity.client;
 
 import me.arktikus.frostbite.FrostBite;

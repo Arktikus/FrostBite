@@ -1,3 +1,7 @@
+/*
+ * Copyright (C) 2023 Sören Wedig - All Rights Reserved
+ */
+
 package me.arktikus.frostbite.event;
 
 import me.arktikus.frostbite.networking.ModPackets;

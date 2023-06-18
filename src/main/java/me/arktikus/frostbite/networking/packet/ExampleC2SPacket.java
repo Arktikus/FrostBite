@@ -1,3 +1,7 @@
+/*
+ * Copyright (C) 2023 Sören Wedig - All Rights Reserved
+ */
+
 package me.arktikus.frostbite.networking.packet;
 
 import net.fabricmc.fabric.api.networking.v1.PacketSender;

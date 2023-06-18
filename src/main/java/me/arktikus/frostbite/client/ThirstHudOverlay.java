@@ -1,3 +1,7 @@
+/*
+ * Copyright (C) 2023 Sören Wedig - All Rights Reserved
+ */
+
 package me.arktikus.frostbite.client;
 
 import com.mojang.blaze3d.systems.RenderSystem;

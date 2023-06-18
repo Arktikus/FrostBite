@@ -1,3 +1,7 @@
+/*
+ * Copyright (C) 2023 Sören Wedig - All Rights Reserved
+ */
+
 package me.arktikus.frostbite.entity;
 
 import me.arktikus.frostbite.FrostBite;
@@ -27,6 +31,6 @@ public class ModEntities {
         public static final EntityType<SharkEntity> SHARK = Registry.register(
             Registries.ENTITY_TYPE, new Identifier(FrostBite.MOD_ID, "shark"), //TODO ??? - Correct?
             FabricEntityTypeBuilder.create(SpawnGroup.MONSTER, SharkEntity::new)
-                    .dimensions(EntityDimensions.fixed(1f, 1f)).build());
+                    .dimensions(EntityDimensions.fixed(1.15f, 1f)).build());
 
 }

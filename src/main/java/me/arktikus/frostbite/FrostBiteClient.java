@@ -1,7 +1,10 @@
+/*
+ * Copyright (C) 2023 Sören Wedig - All Rights Reserved
+ */
+
 package me.arktikus.frostbite;
 
 import me.arktikus.frostbite.block.ModBlocks;
-import me.arktikus.frostbite.client.ThirstHudOverlay;
 import me.arktikus.frostbite.client.gui.hud.FrostBiteHud;
 import me.arktikus.frostbite.entity.ModEntities;
 import me.arktikus.frostbite.entity.client.PinguinRenderer;
@@ -11,9 +14,12 @@ import me.arktikus.frostbite.event.KeyInputHandler;
 import me.arktikus.frostbite.networking.ModPackets;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
+import net.fabricmc.fabric.api.client.render.fluid.v1.FluidRenderHandlerRegistry;
+import net.fabricmc.fabric.api.client.render.fluid.v1.SimpleFluidRenderHandler;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
 import net.fabricmc.fabric.api.client.rendering.v1.HudRenderCallback;
 import net.minecraft.client.render.RenderLayer;
+import net.minecraft.util.Identifier;
 
 public class FrostBiteClient implements ClientModInitializer {
     @Override
