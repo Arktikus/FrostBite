@@ -1,3 +1,7 @@
+/*
+ * Copyright (C) 2023 Sören Wedig - All Rights Reserved
+ */
+
 package me.arktikus.frostbite.fluid.custom;
 
 import me.arktikus.frostbite.fluid.ModFluids;
