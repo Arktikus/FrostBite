@@ -5,7 +5,6 @@
 package me.arktikus.frostbite.data;
 
 import me.arktikus.frostbite.block.ModBlocks;
-import me.arktikus.frostbite.fluid.ModFluids;
 import me.arktikus.frostbite.item.ModItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
@@ -51,6 +50,5 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.ARKTIRIUM_HAMMER, Models.GENERATED);
         itemModelGenerator.register(ModItems.IRON_HAMMER, Models.GENERATED);
 
-        itemModelGenerator.register(ModFluids.OIL_BUCKET, Models.GENERATED);
     }
 }

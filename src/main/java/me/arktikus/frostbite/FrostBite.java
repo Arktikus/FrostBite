@@ -10,7 +10,6 @@ import me.arktikus.frostbite.entity.ModEntities;
 import me.arktikus.frostbite.entity.custom.PinguinEntity;
 import me.arktikus.frostbite.entity.custom.SharkEntity;
 import me.arktikus.frostbite.entity.custom.TigerEntity;
-import me.arktikus.frostbite.fluid.ModFluids;
 import me.arktikus.frostbite.item.ModItemGroup;
 import me.arktikus.frostbite.item.ModItems;
 import me.arktikus.frostbite.networking.ModPackets;
@@ -51,8 +50,6 @@ public class FrostBite implements ModInitializer {
 		FabricDefaultAttributeRegistry.register(ModEntities.SHARK, SharkEntity.setAttributes());
 
 		ModPackets.registerC2SPackets();
-
-		ModFluids.register();
 
 		//ServerTickEvents.START_SERVER_TICK.register(new PlayerTickHandler()); - Removed because this was an example
 		//ClientPlayConnectionEvents.JOIN.register(new PlayerJoinHandler()); - Removed because this was an example
