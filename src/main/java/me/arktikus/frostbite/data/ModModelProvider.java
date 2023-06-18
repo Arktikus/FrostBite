@@ -1,6 +1,7 @@
 package me.arktikus.frostbite.data;
 
 import me.arktikus.frostbite.block.ModBlocks;
+import me.arktikus.frostbite.fluid.ModFluids;
 import me.arktikus.frostbite.item.ModItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
@@ -34,6 +35,7 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerParentedItemModel(ModItems.TIGER_SPAWN_EGG, ModelIds.getMinecraftNamespacedItem("template_spawn_egg"));
         blockStateModelGenerator.registerParentedItemModel(ModItems.PINGUIN_SPAWN_EGG, ModelIds.getMinecraftNamespacedItem("template_spawn_egg"));
         blockStateModelGenerator.registerParentedItemModel(ModItems.SHARK_SPAWN_EGG, ModelIds.getMinecraftNamespacedItem("template_spawn_egg"));
+
     }
 
     @Override
@@ -42,5 +44,6 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.RAW_ARKTIRIUM, Models.GENERATED);
         itemModelGenerator.register(ModItems.BLUE_ARCTIC_STICK, Models.GENERATED);
 
+        itemModelGenerator.register(ModFluids.OIL_BUCKET, Models.GENERATED);
     }
 }
