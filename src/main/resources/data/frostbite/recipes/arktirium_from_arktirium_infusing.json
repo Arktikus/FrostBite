@@ -1,0 +1,11 @@
+{
+  "type": "frostbite:arktirium_infusing",
+  "ingredients": [
+    {
+      "item": "frostbite:raw_arktirium"
+    }
+  ],
+  "output": {
+    "item": "frostbite:arktirium"
+  }
+}

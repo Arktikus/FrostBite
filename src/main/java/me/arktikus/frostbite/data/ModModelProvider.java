@@ -39,6 +39,8 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerParentedItemModel(ModItems.PINGUIN_SPAWN_EGG, ModelIds.getMinecraftNamespacedItem("template_spawn_egg"));
         blockStateModelGenerator.registerParentedItemModel(ModItems.SHARK_SPAWN_EGG, ModelIds.getMinecraftNamespacedItem("template_spawn_egg"));
 
+        //blockStateModelGenerator.registerNorthDefaultHorizontalRotation(ModBlocks.ARKTIRIUM_INFUSING_STATION);
+
     }
 
     @Override
