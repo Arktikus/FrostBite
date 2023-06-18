@@ -1,6 +1,7 @@
 package me.arktikus.frostbite.entity.custom;
 
 import me.arktikus.frostbite.entity.ModEntities;
+import me.arktikus.frostbite.entity.ModEntityType;
 import me.arktikus.frostbite.sound.ModSounds;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.ai.goal.*;
@@ -42,13 +43,23 @@ public class PinguinEntity extends AnimalEntity implements GeoEntity {
     protected void initGoals() {
         this.goalSelector.add(1, new SwimGoal(this));
         this.goalSelector.add(2, new FleeEntityGoal<PolarBearEntity>(this, PolarBearEntity.class, 8.0f, 1.6, 1.4));
-        this.goalSelector.add(3, new LookAtEntityGoal(this, PlayerEntity.class, 6.0f));
-        this.goalSelector.add(4, new WanderAroundFarGoal(this, 0.75f, 1));
+        this.goalSelector.add(3, new EscapeDangerGoal(this, 1.0));
+        this.goalSelector.add(4, new AnimalMateGoal(this, 1.0));
+        this.goalSelector.add(5, new LookAtEntityGoal(this, PlayerEntity.class, 6.0f));
+        this.goalSelector.add(6, new WanderAroundFarGoal(this, 0.75f, 1));
 
-        this.goalSelector.add(5, new PinguinEntity.FollowParentGoal(this, 1.25));
+        this.goalSelector.add(7, new PinguinEntity.FollowParentGoal(this, 1.25));
 
-        this.goalSelector.add(6, new LookAroundGoal(this));
+        this.goalSelector.add(8, new LookAroundGoal(this));
     }
+
+    /*
+    @Override
+    @Nullable
+    public PinguinEntity createChild(ServerWorld serverWorld, PassiveEntity passiveEntity) {
+        PinguinEntity pinguinEntity = ModEntityType.PINGUIN.create(serverWorld);
+        return pinguinEntity;
+    } */
 
     @Nullable
     @Override
@@ -90,6 +101,23 @@ public class PinguinEntity extends AnimalEntity implements GeoEntity {
     protected SoundEvent getDeathSound() {
         return ModSounds.ENTITY_PINGUIN_DEATH;
     }
+
+    /*@Override
+    protected SoundEvent getAmbientSound() {
+        return SoundEvents.ENTITY_COW_AMBIENT;
+    }
+
+    @Override
+    protected void playStepSound(BlockPos pos, BlockState state) {
+        this.playSound(SoundEvents.ENTITY_COW_STEP, 0.15f, 1.0f);
+    }
+
+    @Override
+    protected float getSoundVolume() {
+        return 0.4f;
+    }
+
+    */
 
     @Override
     public AnimatableInstanceCache getAnimatableInstanceCache() {

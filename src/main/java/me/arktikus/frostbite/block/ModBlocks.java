@@ -1,9 +1,7 @@
 package me.arktikus.frostbite.block;
 
 import me.arktikus.frostbite.FrostBite;
-import me.arktikus.frostbite.block.custom.ModDoorBlock;
-import me.arktikus.frostbite.block.custom.ModStairsBlock;
-import me.arktikus.frostbite.block.custom.ModTrapdoorBlock;
+import me.arktikus.frostbite.block.custom.*;
 import me.arktikus.frostbite.item.ModItemGroup;
 import me.arktikus.frostbite.sound.ModSounds;
 import me.arktikus.frostbite.world.tree.BlueArcticSaplingGenerator;
@@ -65,6 +63,20 @@ public class ModBlocks {
     public static final Block BLUE_ARCTIC_TRAPDOOR = registerBlock("blue_arctic_trapdoor",
             new ModTrapdoorBlock(FabricBlockSettings.copyOf(ModBlocks.BLUE_ARCTIC_PLANKS).strength(1.0f).requiresTool().nonOpaque() ,BlockSetType.OAK), ModItemGroup.ARKTIRIUM);
 
+    public static final Block BLUE_ARCTIC_BUTTON = registerBlock("blue_arctic_button",
+            new ModButtonBlock(FabricBlockSettings.copyOf(ModBlocks.BLUE_ARCTIC_PLANKS).strength(1.0f).requiresTool().noCollision() ,BlockSetType.OAK, 60, false), ModItemGroup.ARKTIRIUM);
+
+    public static final Block BLUE_ARCTIC_PRESSURE_PLATE = registerBlock("blue_arctic_pressure_plate",
+            new ModPressurePlateBlock(PressurePlateBlock.ActivationRule.EVERYTHING, FabricBlockSettings.copyOf(ModBlocks.BLUE_ARCTIC_PLANKS).strength(1.0f).requiresTool() ,BlockSetType.OAK), ModItemGroup.ARKTIRIUM);
+
+    public static final Block BLUE_ARCTIC_FENCE = registerBlock("blue_arctic_fence",
+            new FenceBlock(FabricBlockSettings.copyOf(ModBlocks.BLUE_ARCTIC_PLANKS).strength(1.0f).requiresTool()), ModItemGroup.ARKTIRIUM);
+
+    public static final Block BLUE_ARCTIC_FENCE_GATE = registerBlock("blue_arctic_fence_gate",
+            new FenceGateBlock(FabricBlockSettings.copyOf(ModBlocks.BLUE_ARCTIC_PLANKS).strength(1.0f).requiresTool(), WoodType.SPRUCE), ModItemGroup.ARKTIRIUM);
+
+    public static final Block BLUE_ARCTIC_WALL = registerBlock("blue_arctic_wall",
+            new WallBlock(FabricBlockSettings.copyOf(ModBlocks.BLUE_ARCTIC_PLANKS).strength(1.0f).requiresTool()), ModItemGroup.ARKTIRIUM);
 
     private static Block registerBlock(String name, Block block, RegistryKey<ItemGroup> group) {
         registerBlockItem(name, block, group);

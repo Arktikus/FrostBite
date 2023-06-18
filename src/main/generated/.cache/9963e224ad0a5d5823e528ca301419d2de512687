@@ -1,12 +1,12 @@
-// 1.20	2023-06-17T03:32:46.0792818	Frostbite/Recipes
+// 1.20	2023-06-18T08:48:15.4189211	Frostbite/Recipes
 6068d4f62eb7ddb7793981aa0bca36e9e69c72fc data\frostbite\advancements\recipes\misc\arktirium_from_smelting_raw_arktirium.json
 91019e519bc120697d34df3153241a03960236b6 data\frostbite\recipes\ladder.json
-468800501d177bc9c32428089319c63f4a540435 data\frostbite\recipes\arktirium_block.json
 faa9c5d183ba1642ec876e18bb0013ce57470591 data\frostbite\advancements\recipes\misc\crafting_table.json
+468800501d177bc9c32428089319c63f4a540435 data\frostbite\recipes\arktirium_block.json
 7d8ca36aa2c508bd8f26a977a6fdf268347c15f6 data\frostbite\recipes\blue_arctic_stick.json
 09bbd7fd1ff0d7fbea73dc76e1bb2d2fb1cf2a20 data\frostbite\advancements\recipes\misc\arktirium_block.json
-278cc1f89e45c468a37c1e04d291bdf915732a39 data\frostbite\recipes\arktirium.json
 9eaf2545f8dc476a5aadecc76efe60ef7f88c714 data\frostbite\advancements\recipes\misc\blue_arctic_stick.json
+278cc1f89e45c468a37c1e04d291bdf915732a39 data\frostbite\recipes\arktirium.json
 e394a655593bb6b102738886431f63cd3041b074 data\frostbite\recipes\arktirium_from_smelting_raw_arktirium.json
 ea6c96b2b9e69e2960eb7d1be64b44a7eb6b0473 data\frostbite\advancements\recipes\building_blocks\blue_arctic_planks.json
 c5631df90d8e019fc14955d0caba19937b1262b2 data\frostbite\advancements\recipes\misc\ladder.json
@@ -17,5 +17,5 @@ bd852bbb5c9ebea8427a2d13bef8c7d1373ec234 data\frostbite\advancements\recipes\too
 dcb893df51633c57b3709896a5b09146ca1f03ef data\frostbite\recipes\iron_hammer.json
 8f314797ac9a4be5b7da3fcd97c004bd6e722d46 data\frostbite\recipes\blue_arctic_planks.json
 dd5b3ff68a16a1e62b4b822287770920a726a1fa data\frostbite\recipes\arktirium_hammer.json
-82016084f04c907bc9040acc11df6f1bfd97b7c6 data\frostbite\advancements\recipes\building_blocks\arktirium.json
 9c7f0e594abc154ebb2cd8cf8cbe12d56202735f data\frostbite\advancements\recipes\tools\iron_hammer.json
+82016084f04c907bc9040acc11df6f1bfd97b7c6 data\frostbite\advancements\recipes\building_blocks\arktirium.json

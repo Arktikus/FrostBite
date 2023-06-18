@@ -6,6 +6,9 @@
   "item.frostbite.pinguin_spawn_egg": "Pinguin Spawn Egg",
   "item.frostbite.shark_spawn_egg": "Shark Spawn Egg",
 
+  "item.frostbite.arktirium_hammer": "Arktirium Hammer",
+  "item.frostbite.iron_hammer": "Iron Hammer",
+
   "block.frostbite.arktirium_block": "Arktirium Block",
   "block.frostbite.arktirium_ore": "Arktirium Ore",
   "block.frostbite.deepslate_arktirium_ore": "Arktirium Deepslate Ore",
@@ -21,6 +24,12 @@
   "block.frostbite.blue_arctic_slab": "Blue Arctic Slab",
   "block.frostbite.blue_arctic_door": "Blue Arctic Door",
   "block.frostbite.blue_arctic_trapdoor": "Blue Arctic Trapdoor",
+  "block.frostbite.blue_arctic_button": "Blue Arctic Button",
+  "block.frostbite.blue_arctic_pressure_plate": "Blue Arctic Pressure Plate",
+  "block.frostbite.blue_arctic_wall": "Blue Arctic Wall",
+  "block.frostbite.blue_arctic_fence": "Blue Arctic Fence",
+  "block.frostbite.blue_arctic_fence_gate": "Blue Arctic Fence Gate",
+
   "item.frostbite.blue_arctic_stick": "Blue Arctic Stick",
 
   "painting.frostbite.sunset.title": "Sunset Painting",

@@ -23,7 +23,7 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerLog(ModBlocks.BLUE_ARCTIC_LOG).log(ModBlocks.BLUE_ARCTIC_LOG).wood(ModBlocks.BLUE_ARCTIC_WOOD);
         blockStateModelGenerator.registerLog(ModBlocks.STRIPPED_BLUE_ARCTIC_LOG).log(ModBlocks.STRIPPED_BLUE_ARCTIC_LOG).wood(ModBlocks.STRIPPED_BLUE_ARCTIC_WOOD);
 
-        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.BLUE_ARCTIC_PLANKS).stairs(ModBlocks.BLUE_ARCTIC_STAIRS).slab(ModBlocks.BLUE_ARCTIC_SLAB);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.BLUE_ARCTIC_PLANKS).stairs(ModBlocks.BLUE_ARCTIC_STAIRS).slab(ModBlocks.BLUE_ARCTIC_SLAB).fence(ModBlocks.BLUE_ARCTIC_FENCE).fenceGate(ModBlocks.BLUE_ARCTIC_FENCE_GATE).button(ModBlocks.BLUE_ARCTIC_BUTTON).pressurePlate(ModBlocks.BLUE_ARCTIC_PRESSURE_PLATE).wall(ModBlocks.BLUE_ARCTIC_WALL);
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.BLUE_ARCTIC_LEAVES);
 
         blockStateModelGenerator.registerTintableCrossBlockState(ModBlocks.BLUE_ARCTIC_SAPLING, BlockStateModelGenerator.TintType.NOT_TINTED);
