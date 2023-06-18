@@ -48,6 +48,9 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.RAW_ARKTIRIUM, Models.GENERATED);
         itemModelGenerator.register(ModItems.BLUE_ARCTIC_STICK, Models.GENERATED);
 
+        itemModelGenerator.register(ModItems.ARKTIRIUM_HAMMER, Models.GENERATED);
+        itemModelGenerator.register(ModItems.IRON_HAMMER, Models.GENERATED);
+
         itemModelGenerator.register(ModFluids.OIL_BUCKET, Models.GENERATED);
     }
 }
