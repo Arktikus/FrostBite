@@ -64,18 +64,20 @@ public class SharkEntity extends AnimalEntity implements GeoEntity {
 
         @Override
         protected void initGoals() {
-            GoToWalkTargetGoal goToWalkTargetGoal = new GoToWalkTargetGoal(this, 1.0);
-            this.wanderGoal = new WanderAroundGoal(this, 1.0, 80);
-            this.goalSelector.add(3, new SharkEntity.AttackGoal(this));
-            this.goalSelector.add(3, goToWalkTargetGoal);
-            this.goalSelector.add(4, this.wanderGoal);
-            this.goalSelector.add(5, new LookAtEntityGoal(this, PlayerEntity.class, 8.0f));
-            this.goalSelector.add(6, new LookAroundGoal(this));
-            this.wanderGoal.setControls(EnumSet.of(Goal.Control.MOVE, Goal.Control.LOOK));
-            goToWalkTargetGoal.setControls(EnumSet.of(Goal.Control.MOVE, Goal.Control.LOOK));
-            this.targetSelector.add(2, new SharkEntity.TargetGoal<PlayerEntity>(this, PlayerEntity.class));
-            this.targetSelector.add(3, new ActiveTargetGoal<>(this, PlayerEntity.class, true));
-            this.targetSelector.add(3, new ActiveTargetGoal<>(this, MerchantEntity.class, true));
+            //GoToWalkTargetGoal goToWalkTargetGoal = new GoToWalkTargetGoal(this, 1.0);
+            //this.wanderGoal = new WanderAroundGoal(this, 1.0, 80);
+            this.goalSelector.add(1, new SharkEntity.AttackGoal(this));
+            //this.goalSelector.add(2, goToWalkTargetGoal);
+            //this.goalSelector.add(3, this.wanderGoal);
+            this.goalSelector.add(6, new LookAtEntityGoal(this, PlayerEntity.class, 8.0f));
+            this.goalSelector.add(5, new LookAroundGoal(this));
+            this.goalSelector.add(4, new WanderAroundGoal(this, 1.0f));
+            //this.wanderGoal.setControls(EnumSet.of(Goal.Control.MOVE, Goal.Control.LOOK));
+            //goToWalkTargetGoal.setControls(EnumSet.of(Goal.Control.MOVE, Goal.Control.LOOK));
+            //this.targetSelector.add(2, new SharkEntity.TargetGoal<PlayerEntity>(this, PlayerEntity.class));
+            this.targetSelector.add(2, new ActiveTargetGoal<>(this, PlayerEntity.class, true));
+            this.targetSelector.add(2, new ActiveTargetGoal<>(this, MerchantEntity.class, true));
+            this.targetSelector.add(1, new ActiveTargetGoal<>(this, FishEntity.class, true));
         }
 
     @Override

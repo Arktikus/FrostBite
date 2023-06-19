@@ -82,6 +82,9 @@ public class ModBlocks {
     public static final Block BLUE_ARCTIC_WALL = registerBlock("blue_arctic_wall",
             new WallBlock(FabricBlockSettings.copyOf(ModBlocks.BLUE_ARCTIC_PLANKS).strength(1.0f).requiresTool()), ModItemGroup.ARKTIRIUM);
 
+    public static final Block ARKTIRIUM_INFUSING_STATION = registerBlock("arktirium_infusing_station",
+            new ArktiriumInfusingStationBlock(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).strength(4f).requiresTool().nonOpaque()), ModItemGroup.ARKTIRIUM);
+
     private static Block registerBlock(String name, Block block, RegistryKey<ItemGroup> group) {
         registerBlockItem(name, block, group);
         return Registry.register(Registries.BLOCK, new Identifier(FrostBite.MOD_ID, name), block);
