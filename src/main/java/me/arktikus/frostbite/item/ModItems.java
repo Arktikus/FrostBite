@@ -7,6 +7,7 @@ package me.arktikus.frostbite.item;
 import me.arktikus.frostbite.FrostBite;
 import me.arktikus.frostbite.entity.ModEntities;
 import me.arktikus.frostbite.item.custom.ModHammer;
+import me.arktikus.frostbite.item.custom.ModScythe;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.item.Item;
@@ -27,10 +28,14 @@ public class ModItems {
             new Item(new FabricItemSettings()));
 
     public static final Item ARKTIRIUM_HAMMER = registerItem("arktirium_hammer",
-            new ModHammer(ModToolMaterial.ARKTIRIUM, 2, 2f,
+            new ModHammer(ModToolMaterial.ARKTIRIUM, 1, 1f,
                     new FabricItemSettings()));
     public static final Item IRON_HAMMER = registerItem("iron_hammer",
             new ModHammer(ModToolMaterial.IRON, 1, 1f,
+                    new FabricItemSettings()));
+
+    public static final Item ARKTIRIUM_SCYTHE = registerItem("arktirium_wand",
+            new ModScythe(ModToolMaterial.ARKTIRIUM, 1, 0.1f,
                     new FabricItemSettings()));
 
     public static final Item TIGER_SPAWN_EGG = registerItem("tiger_spawn_egg",
@@ -65,6 +70,7 @@ public class ModItems {
 
         addToItemGroup(ModItemGroup.ARKTIRIUM, ARKTIRIUM_HAMMER);
         addToItemGroup(ModItemGroup.ARKTIRIUM, IRON_HAMMER);
+        addToItemGroup(ModItemGroup.ARKTIRIUM, ARKTIRIUM_SCYTHE);
 
         addToItemGroup(ModItemGroup.ARKTIRIUM, TIGER_SPAWN_EGG);
         addToItemGroup(ModItemGroup.ARKTIRIUM, PINGUIN_SPAWN_EGG);
