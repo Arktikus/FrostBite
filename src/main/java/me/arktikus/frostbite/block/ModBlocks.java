@@ -52,7 +52,7 @@ public class ModBlocks {
             new LeavesBlock(FabricBlockSettings.copyOf(Blocks.OAK_LEAVES).strength(0.3f)), ModItemGroup.ARKTIRIUM);
 
     public static final Block BLUE_ARCTIC_SAPLING = registerBlock("blue_arctic_sapling",
-            new SaplingBlock(new BlueArcticSaplingGenerator(), FabricBlockSettings.copyOf(Blocks.OAK_SAPLING).strength(4.0f).requiresTool()), ModItemGroup.ARKTIRIUM);
+            new SaplingBlock(new BlueArcticSaplingGenerator(), FabricBlockSettings.copyOf(Blocks.OAK_SAPLING)), ModItemGroup.ARKTIRIUM);
 
     public static final Block BLUE_ARCTIC_STAIRS = registerBlock("blue_arctic_stairs",
             new ModStairsBlock(ModBlocks.BLUE_ARCTIC_PLANKS.getDefaultState(),

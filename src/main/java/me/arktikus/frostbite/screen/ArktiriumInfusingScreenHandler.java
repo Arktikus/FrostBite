@@ -4,11 +4,14 @@
 
 package me.arktikus.frostbite.screen;
 
+import me.arktikus.frostbite.block.entity.ArktiriumInfusingBlockEntity;
+import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.inventory.Inventory;
 import net.minecraft.inventory.SimpleInventory;
 import net.minecraft.item.ItemStack;
+import net.minecraft.network.PacketByteBuf;
 import net.minecraft.screen.ArrayPropertyDelegate;
 import net.minecraft.screen.PropertyDelegate;
 import net.minecraft.screen.ScreenHandler;
@@ -17,17 +20,20 @@ import net.minecraft.screen.slot.Slot;
 public class ArktiriumInfusingScreenHandler extends ScreenHandler {
     private final Inventory inventory;
     private final PropertyDelegate propertyDelegate;
+    public final ArktiriumInfusingBlockEntity blockEntity;
 
-    public ArktiriumInfusingScreenHandler(int syncId, PlayerInventory inventory) {
-        this(syncId, inventory, new SimpleInventory(3), new ArrayPropertyDelegate(2));
+    public ArktiriumInfusingScreenHandler(int syncId, PlayerInventory inventory, PacketByteBuf buf) {
+        this(syncId, inventory, inventory.player.getWorld().getBlockEntity(buf.readBlockPos()),
+                new ArrayPropertyDelegate(2));
     }
 
-    public ArktiriumInfusingScreenHandler(int syncId, PlayerInventory playerInventory, Inventory inventory, PropertyDelegate delegate) {
+    public ArktiriumInfusingScreenHandler(int syncId, PlayerInventory playerInventory, BlockEntity entity, PropertyDelegate delegate) {
         super(ModScreenHandlers.ARKTIRIUM_INFUSING_SCREEN_HANDLER, syncId);
-        checkSize(inventory, 3);
-        this.inventory = inventory;
+        checkSize(((Inventory) entity), 3);
+        this.inventory = ((Inventory) entity);
         inventory.onOpen(playerInventory.player);
         this.propertyDelegate = delegate;
+        this.blockEntity = (ArktiriumInfusingBlockEntity) entity;
 
         this.addSlot(new Slot(inventory, 0, 12, 15));
         this.addSlot(new Slot(inventory, 1, 86, 15));

@@ -69,9 +69,8 @@ public class SharkEntity extends AnimalEntity implements GeoEntity {
             this.goalSelector.add(1, new SharkEntity.AttackGoal(this));
             //this.goalSelector.add(2, goToWalkTargetGoal);
             //this.goalSelector.add(3, this.wanderGoal);
-            this.goalSelector.add(6, new LookAtEntityGoal(this, PlayerEntity.class, 8.0f));
-            this.goalSelector.add(5, new LookAroundGoal(this));
-            this.goalSelector.add(4, new WanderAroundGoal(this, 1.0f));
+            this.goalSelector.add(2, new LookAtEntityGoal(this, PlayerEntity.class, 8.0f));
+            this.goalSelector.add(3, new WanderAroundGoal(this, 1.0f));
             //this.wanderGoal.setControls(EnumSet.of(Goal.Control.MOVE, Goal.Control.LOOK));
             //goToWalkTargetGoal.setControls(EnumSet.of(Goal.Control.MOVE, Goal.Control.LOOK));
             //this.targetSelector.add(2, new SharkEntity.TargetGoal<PlayerEntity>(this, PlayerEntity.class));

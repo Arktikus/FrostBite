@@ -82,7 +82,7 @@ public class ArktiriumInfusingStationBlock extends BlockWithEntity implements Bl
     public ActionResult onUse(BlockState state, World world, BlockPos pos,
                               PlayerEntity player, Hand hand, BlockHitResult hit) {
         if (!world.isClient) {
-            NamedScreenHandlerFactory screenHandlerFactory = state.createScreenHandlerFactory(world, pos);
+            NamedScreenHandlerFactory screenHandlerFactory = ((ArktiriumInfusingBlockEntity) world.getBlockEntity(pos));
 
             if (screenHandlerFactory != null) {
                 player.openHandledScreen(screenHandlerFactory);

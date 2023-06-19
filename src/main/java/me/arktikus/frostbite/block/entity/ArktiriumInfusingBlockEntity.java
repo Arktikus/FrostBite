@@ -6,8 +6,14 @@ package me.arktikus.frostbite.block.entity;
 
 import me.arktikus.frostbite.block.custom.ArktiriumInfusingStationBlock;
 import me.arktikus.frostbite.item.ModItems;
+import me.arktikus.frostbite.networking.ModPackets;
 import me.arktikus.frostbite.recipe.ArktiriumInfusingRecipe;
 import me.arktikus.frostbite.screen.ArktiriumInfusingScreenHandler;
+import net.fabricmc.fabric.api.networking.v1.PacketByteBufs;
+import net.fabricmc.fabric.api.networking.v1.PlayerLookup;
+import net.fabricmc.fabric.api.networking.v1.ServerPlayNetworking;
+import net.fabricmc.fabric.api.screenhandler.v1.ExtendedScreenHandlerFactory;
+import net.fabricmc.fabric.api.transfer.v1.transaction.Transaction;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.block.entity.BlockEntityType;
@@ -18,21 +24,42 @@ import net.minecraft.inventory.SimpleInventory;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NbtCompound;
+import net.minecraft.network.PacketByteBuf;
 import net.minecraft.registry.DynamicRegistryManager;
 import net.minecraft.screen.NamedScreenHandlerFactory;
 import net.minecraft.screen.PropertyDelegate;
 import net.minecraft.screen.ScreenHandler;
+import net.minecraft.server.network.ServerPlayerEntity;
+import net.minecraft.server.world.ServerWorld;
 import net.minecraft.text.Text;
 import net.minecraft.util.collection.DefaultedList;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
+import team.reborn.energy.api.base.SimpleEnergyStorage;
 
 import java.util.Optional;
 
-public class ArktiriumInfusingBlockEntity extends BlockEntity implements NamedScreenHandlerFactory, ImplementedInventory {
+public class ArktiriumInfusingBlockEntity extends BlockEntity implements ExtendedScreenHandlerFactory, ImplementedInventory {
     private final DefaultedList<ItemStack> inventory = DefaultedList.ofSize(3, ItemStack.EMPTY);
+
+    public final SimpleEnergyStorage energyStorage = new SimpleEnergyStorage(30000, 32, 32) {
+        @Override
+        protected void onFinalCommit() {
+            markDirty();
+            if(!world.isClient()) {
+                PacketByteBuf data = PacketByteBufs.create();
+                data.writeLong(amount);
+                data.writeBlockPos(getPos());
+
+                for(ServerPlayerEntity player : PlayerLookup.tracking((ServerWorld) world, getPos())) {
+                    ServerPlayNetworking.send(player, ModPackets.ENERGY_SYNC, data);
+                }
+            }
+
+        }
+    };
 
     protected final PropertyDelegate propertyDelegate;
     private int progress = 0;
@@ -67,6 +94,10 @@ public class ArktiriumInfusingBlockEntity extends BlockEntity implements NamedSc
         return this.inventory;
     }
 
+    public void setEnergyLevel(long energyLevel) {
+        this.energyStorage.amount = energyLevel;
+    }
+
     @Override
     public Text getDisplayName() {
         return Text.literal("Arktirium Infusing Station");
@@ -79,10 +110,16 @@ public class ArktiriumInfusingBlockEntity extends BlockEntity implements NamedSc
     }
 
     @Override
+    public void writeScreenOpeningData(ServerPlayerEntity player, PacketByteBuf buf) {
+        buf.writeBlockPos(this.pos);
+    }
+
+    @Override
     protected void writeNbt(NbtCompound nbt) {
         super.writeNbt(nbt);
         Inventories.writeNbt(nbt, inventory);
         nbt.putInt("arktirium_infusing_station.progress", progress);
+        nbt.putLong("arktirium_infusing_station.energy", energyStorage.amount);
     }
 
     @Override
@@ -90,6 +127,7 @@ public class ArktiriumInfusingBlockEntity extends BlockEntity implements NamedSc
         Inventories.readNbt(nbt, inventory);
         super.readNbt(nbt);
         progress = nbt.getInt("arktirium_infusing_station.progress");
+        energyStorage.amount = nbt.getLong("arktirium_infusing_station.energy");
     }
 
     private void resetProgress() {
@@ -161,8 +199,16 @@ public class ArktiriumInfusingBlockEntity extends BlockEntity implements NamedSc
             return;
         }
 
-        if(hasRecipe(entity)) {
+        if(hasEnergyItem(entity)) {
+            try(Transaction transaction = Transaction.openOuter()) {
+                entity.energyStorage.insert(16, transaction);
+                transaction.commit();
+            }
+        }
+
+        if(hasRecipe(entity) && hasEnoughEnergy(entity)) {
             entity.progress++;
+            extractEnergy(entity);
             markDirty(world, blockPos, state);
             if(entity.progress >= entity.maxProgress) {
                 craftItem(entity);
@@ -171,6 +217,21 @@ public class ArktiriumInfusingBlockEntity extends BlockEntity implements NamedSc
             entity.resetProgress();
             markDirty(world, blockPos, state);
         }
+    }
+
+    private static void extractEnergy(ArktiriumInfusingBlockEntity entity) {
+        try(Transaction transaction = Transaction.openOuter()) {
+            entity.energyStorage.extract(32, transaction);
+            transaction.commit();
+        }
+    }
+
+    private static boolean hasEnoughEnergy(ArktiriumInfusingBlockEntity entity) {
+        return entity.energyStorage.amount >= 32;
+    }
+
+    private static boolean hasEnergyItem(ArktiriumInfusingBlockEntity entity) {
+        return entity.getStack(0).getItem() == ModItems.ARKTIRIUM;
     }
 
     private static void craftItem(ArktiriumInfusingBlockEntity entity) {

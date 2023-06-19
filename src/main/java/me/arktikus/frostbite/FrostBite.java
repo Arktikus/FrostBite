@@ -59,6 +59,7 @@ public class FrostBite implements ModInitializer {
 		ModRecipes.registerRecipes();
 
 		ModPackets.registerC2SPackets();
+		ModPackets.registerS2CPackets();
 
 		//ServerTickEvents.START_SERVER_TICK.register(new PlayerTickHandler()); - Removed because this was an example
 		//ClientPlayConnectionEvents.JOIN.register(new PlayerJoinHandler()); - Removed because this was an example
