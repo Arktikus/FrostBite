@@ -37,6 +37,20 @@ To use FrostBite in your Minecraft game, follow these simple steps:
 
 Please note that FrostBite requires Fabric Loader, Fabric API, GeckoLib, and Tech Reborn to be installed in order to function properly.
 
+## Contributing
+
+We welcome contributions from the community to help improve FrostBite. Whether you're a seasoned developer or just getting started, there are several ways you can contribute:
+
+- **Bug Reports:** If you come across any issues or bugs while using FrostBite, let us know! [Open a new issue](https://github.com/Arktikus/FrostBite/issues/new?assignees=&labels=bug&projects=&template=BUG_REPORT.yml&title=%5BBUG%5D+-+%3Ctitle%3E) and provide as much detail as possible about the problem. We'll investigate and work on resolving it.
+
+- **Feature Requests:** Have an idea for a new feature or improvement? We'd love to hear it! [Submit a new feature request](https://github.com/Arktikus/FrostBite/issues/new?assignees=&labels=question&projects=&template=FEATURE_REQUEST.yml&title=%5BREQUEST%5D+-+%3Ctitle%3E) and describe your suggestion. We'll review it and consider adding it to the mod.
+
+- **Pull Requests:** If you're comfortable with coding and want to contribute directly to the project, you can submit a pull request. Fork the repository, make your changes in a new branch, and submit the pull request. We'll review it and merge it if it aligns with our project's goals.
+
+If you're new to contributing or have any questions, don't hesitate to reach out. We're here to help and guide you through the process.
+
+Happy contributing!
+
 ## Acknowledgements
 This project incorporates code and assets that are licensed under the MIT License:
 
