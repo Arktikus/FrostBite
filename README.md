@@ -72,3 +72,6 @@ If you have any legal complaints regarding this project, please feel free to rea
 - Discord: arktikus
 
 Please provide a detailed description of the complaint, and I will do my best to address the issue promptly and work towards a resolution.
+
+## Support Me
+[![Buy me a Coffee](button.png)](https://www.buymeacoffee.com/Arktikus)
