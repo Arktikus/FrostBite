@@ -35,7 +35,7 @@ jobs:
           git config user.email "ArktikusArkan@gmail.com"
           git add build
           git commit -m "Add build artifacts"
-          git push
+          git push origin HEAD:main
 
       - name: Determine JAR file name
         id: jar-file
