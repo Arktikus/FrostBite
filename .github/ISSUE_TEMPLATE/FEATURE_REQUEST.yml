@@ -1,0 +1,29 @@
+name: "💡 Feature Request"
+description: Create a new ticket for a new feature request
+title: "[REQUEST] - <title>"
+labels: [
+  "question"
+]
+body:
+  - type: input
+    id: start_date
+    attributes:
+      label: "Start Date"
+      description: Start of development
+      placeholder: "month/day/year"
+    validations:
+      required: false
+  - type: textarea
+    id: summary
+    attributes:
+      label: "Summary"
+      description: Provide a brief explanation of the feature
+    validations:
+      required: true
+  - type: textarea
+    id: basic_example
+    attributes:
+      label: "Basic Example"
+      description: Indicate here some basic examples of your feature.
+    validations:
+      required: true
