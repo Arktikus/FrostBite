@@ -37,7 +37,7 @@ jobs:
           git config user.email "ArktikusArkan@gmail.com"
           git add build
           git commit -m "Add build artifacts"
-          git remote set-url origin https://${GH_TOKEN}@github.com/Arktikus/frostbite.git
+          git remote set-url origin "https://${{ env.GH_TOKEN }}@github.com/Arktikus/frostbite.git"
           git push origin HEAD:main
 
       - name: Determine JAR file name
