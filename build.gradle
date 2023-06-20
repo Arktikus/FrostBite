@@ -118,7 +118,7 @@ publishing {
 			name = "GitHubPackages"
 			url = uri("https://maven.pkg.github.com/Arktikus/FrostBite")
 			credentials {
-				username = project.findProperty("gpr.user") ?: System.getenv("Arktikus")
+				username = "Arktikus"
 				password = project.findProperty("gpr.key") ?: System.getenv("MY_GITHUB_TOKEN")
 			}
 		}
