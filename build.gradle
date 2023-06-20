@@ -118,6 +118,7 @@ publishing {
 				name = "GitHubPackages"
 				url = uri("https://github.com/Arktikus/FrostBite")
 				credentials {
+					username = project.findProperty("gpr.username") ?: System.getenv("MY_GITHUB_USERNAME")
 					password = project.findProperty("gpr.key") ?: System.getenv("MY_GITHUB_TOKEN")
 				}
 			}
