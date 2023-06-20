@@ -113,7 +113,6 @@ publishing {
 
 	// See https://docs.gradle.org/current/userguide/publishing_maven.html for information on how to set up publishing.
 	repositories {
-		repositories {
 			maven {
 				name = "GitHubPackages"
 				url = uri("https://github.com/Arktikus/FrostBite")
@@ -122,6 +121,5 @@ publishing {
 					password = project.findProperty("gpr.key") ?: System.getenv("MY_GITHUB_TOKEN")
 				}
 			}
-		}
 	}
 }
