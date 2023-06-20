@@ -14,13 +14,12 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Set up Java JDK
-      uses: actions/setup-java@v1.4.4
-      with:
-        distribution: 'adopt'
-        java-version: '17'
-        java-package: 'jdk'
-        server-id: 'github'
-        settings-path: ${{ github.workspace }}
+      run: |
+        curl -sL https://github.com/actions/setup-java/releases/latest/download/install-jdk.sh -o install-jdk.sh
+        chmod +x install-jdk.sh
+        ./install-jdk.sh --url "https://github.com/AdoptOpenJDK/openjdk17-binaries/releases/download/jdk-17%2B35/OpenJDK17-jdk_x64_linux_hotspot_17_35.tar.gz" --dir /opt/hostedtoolcache/Java
+        export JAVA_HOME="/opt/hostedtoolcache/Java/jdk-17+35"
+        export PATH="$JAVA_HOME/bin:$PATH"
 
     - name: Build with Gradle
       run: ./gradlew build
