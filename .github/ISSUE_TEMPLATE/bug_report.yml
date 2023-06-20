@@ -1,6 +1,6 @@
 name: "🐛 Bug Report"
 description: Create a new ticket for a bug.
-title: "🐛 [BUG] - <title>"
+title: "[BUG] - <title>"
 labels: [
   "bug"
 ]
@@ -29,7 +29,7 @@ body:
     id: screenshot
     attributes:
       label: "Screenshots"
-      description: If applicable, add screenshots to help explain your problem.
+      description: add screenshots to help explain your problem.
       value: |
         ![DESCRIPTION](LINK.png)
       render: bash
@@ -39,19 +39,7 @@ body:
     id: logs
     attributes:
       label: "Logs"
-      description: Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks.
+      description: Please copy and paste any relevant log output.
       render: bash
-    validations:
-      required: false
-  - type: dropdown
-    id: os
-    attributes:
-      label: "OS"
-      description: What is the impacted environment ?
-      multiple: true
-      options:
-        - Windows
-        - Linux
-        - Mac
     validations:
       required: false
