@@ -50,6 +50,7 @@ sourceSets {
 		}
 	}
 }
+
 dependencies {
 	// To change the versions see the gradle.properties file
 	minecraft "com.mojang:minecraft:${project.minecraft_version}"
@@ -65,8 +66,8 @@ dependencies {
 		exclude(group: "net.fabricmc.fabric-api")
 	}
 
-	modImplementation("curse.maven:reborncore-237903:4571912")
-	modImplementation("curse.maven:techreborn-233564:4571911")
+	modImplementation("curse.maven:reborncore-237903:4582416")
+	modImplementation("curse.maven:techreborn-233564:4582415")
 	
 	// Uncomment the following line to enable the deprecated Fabric API modules. 
 	// These are included in the Fabric API production distribution and allow you to update your mod to the latest modules at a later more convenient time.
@@ -112,9 +113,15 @@ publishing {
 
 	// See https://docs.gradle.org/current/userguide/publishing_maven.html for information on how to set up publishing.
 	repositories {
-		// Add repositories to publish to here.
-		// Notice: This block does NOT have the same function as the block in the top level.
-		// The repositories here will be used for publishing your artifact, not for
-		// retrieving dependencies.
+		repositories {
+			maven {
+				name = "GitHubPackages"
+				url = uri("https://github.com/Arktikus/FrostBite")
+				credentials {
+					username = project.findProperty("gpr.user") ?: System.getenv("MY_GITHUB_USERNAME")
+					password = project.findProperty("gpr.key") ?: System.getenv("MY_GITHUB_TOKEN")
+				}
+			}
+		}
 	}
 }
