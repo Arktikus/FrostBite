@@ -13,17 +13,13 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-
     - name: Set up Java JDK
-      run: |
-        wget https://download.java.net/java/GA/jdk17/0d483333a00540d886896bac774ff48b/35/GPL/openjdk-17_linux-x64_bin.tar.gz
-        tar xvf openjdk-17_linux-x64_bin.tar.gz
-        export JAVA_HOME=$RUNNER_WORKSPACE/jdk-17
-        export PATH="$JAVA_HOME/bin:$PATH"
-
+      uses: actions/setup-java@v2
+      with:
+        java-version: '17'
+        distribution: 'adopt'
     - name: Build with Gradle
       run: ./gradlew build
-
     - name: Publish to GitHub Packages
       run: |
         echo "MY_GITHUB_USERNAME=${{ secrets.MY_GITHUB_USERNAME }}" >> $GITHUB_ENV
