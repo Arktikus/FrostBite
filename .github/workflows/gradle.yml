@@ -25,6 +25,17 @@ jobs:
 
       - name: Build with Gradle
         run: ./gradlew build
+        
+      - name: Print workspace contents
+        run: ls -R
+        
+      - name: Commit build artifacts
+        run: |
+          git config user.name "Arktikus"
+          git config user.email "ArktikusArkan@gmail.com"
+          git add build
+          git commit -m "Add build artifacts"
+          git push
 
       - name: Determine JAR file name
         id: jar-file
