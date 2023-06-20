@@ -25,7 +25,7 @@ jobs:
     - name: maven-settings
       uses: s4u/maven-settings-action@v2
       with:
-        servers: '[{"id": "github", "username": "Arktikus", "password": "${GITHUB_TOKEN_REF}"}]'
+        servers: '[{"id": "github", "username": "Arktikus", "password": "${TOKEN}"}]'
         githubServer: false
 
     - name: Grant execute permissions to gradlew
