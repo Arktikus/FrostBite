@@ -104,12 +104,20 @@ jar {
 }
 
 // configure the maven publication
-publishing {
+/*publishing {
 	publications {
 		mavenJava(MavenPublication) {
 			from components.java
 		}
+	}*/
+	publishing {
+		publications {
+			create("mavenJava", MavenPublication) {
+				from components.java
+			}
+		}
 	}
+
 
 	// See https://docs.gradle.org/current/userguide/publishing_maven.html for information on how to set up publishing.
 	repositories {
@@ -117,9 +125,8 @@ publishing {
 				name = "GitHubPackages"
 				url = uri("https://maven.pkg.github.com/Arktikus/FrostBite")
 				credentials {
-					username = "Arktikus"
+					username = project.findProperty("gpr.key") ?: System.getenv("MY_GITHUB_USERNAME")
 					password = project.findProperty("gpr.key") ?: System.getenv("MY_GITHUB_TOKEN")
 				}
 			}
 	}
-}
