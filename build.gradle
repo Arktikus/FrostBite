@@ -113,15 +113,14 @@ publishing {
 
 
 	// See https://docs.gradle.org/current/userguide/publishing_maven.html for information on how to set up publishing.
-repositories {
-    maven {
-        name = "GitHubPackages"
-        url = uri("https://maven.pkg.github.com/Arktikus/frostbite")
-        credentials {
-            username = project.findProperty("gpr.user") ?: System.getenv("MY_GITHUB_USERNAME") ?: ""
-            password = project.findProperty("gpr.key") ?: System.getenv("MY_GITHUB_TOKEN") ?: ""
-        }
-    }
-}
-
+	repositories {
+		maven {
+			name = "GitHubPackages"
+			url = uri("https://maven.pkg.github.com/Arktikus/frostbite")
+			credentials {
+				username = project.findProperty("gpr.user") ?: System.getenv("USERNAME")
+				password = project.findProperty("gpr.key") ?: System.getenv("TOKEN")
+			}
+		}
+	}
 }
