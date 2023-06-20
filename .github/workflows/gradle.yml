@@ -32,6 +32,12 @@ jobs:
 
     - name: Build with Gradle
       run: ./gradlew build
+      
+    - name: Upload build reports
+      uses: actions/upload-artifact@v3
+      with:
+        name: build-reports
+        path: build/reports/
 
     - name: Determine JAR file name
       id: jar-file
