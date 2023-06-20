@@ -28,8 +28,8 @@ import org.slf4j.LoggerFactory;
 public class FrostBite implements ModInitializer {
 	public static final String MOD_ID = "frostbite";
 
-	public static final String MOD_VERSION = "0.0.2";
-	public static final String MC_VERSION = "1.20.1";
+	public static final String MOD_VERSION = "0.0.1";
+	public static final String MC_VERSION = "1.20";
 
     public static final Logger LOGGER = LoggerFactory.getLogger("frostbite");
 
