@@ -21,6 +21,12 @@ jobs:
         distribution: 'adopt'
         server-id: github
         settings-path: ${{ github.workspace }}
+      
+    - name: maven-settings
+      uses: s4u/maven-settings-action@v2
+      with:
+        servers: '[{"id": "github", "username": "Arktikus", "password": "${GITHUB_TOKEN_REF}"}]'
+        githubServer: false
 
     - name: Grant execute permissions to gradlew
       run: chmod +x gradlew
