@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2023 Sören Wedig - All Rights Reserved
+ * Copyright (C) 2023 Sören Wedig
  */
 
 package me.arktikus.frostbite.entity.custom;
@@ -38,7 +38,6 @@ import software.bernie.geckolib.util.GeckoLibUtil;
 
 import java.util.EnumSet;
 import java.util.function.Predicate;
-
 
 /*
  * This file contains code derived from or based on code

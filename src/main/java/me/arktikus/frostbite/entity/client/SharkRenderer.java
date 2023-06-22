@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2023 Sören Wedig - All Rights Reserved
+ * Copyright (C) 2023 Sören Wedig
  */
 
 package me.arktikus.frostbite.entity.client;
