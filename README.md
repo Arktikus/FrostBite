@@ -26,9 +26,9 @@ To use FrostBite in your Minecraft game, follow these simple steps:
 
 2. Download and install the latest version of [Fabric API](https://www.curseforge.com/minecraft/mc-mods/fabric-api).
 
-3. Obtain the [GeckoLib](https://github.com/bernie-g/geckolib) and [Tech Reborn](https://github.com/TechReborn/TechReborn) mods. These mods are dependencies for FrostBite.
+3. Obtain the [GeckoLib](https://github.com/bernie-g/geckolib) Mod. GeckoLib is a dependency for FrostBite. The [Tech Reborn](https://github.com/TechReborn/TechReborn) mod is recommended, but not needed.
 
-4. Download the FrostBite mod file from the [releases page](https://github.com/YourGitHubUsername/FrostBite/releases) of this repository.
+4. Download the FrostBite mod file from the [releases page](https://github.com/Arktikus/frostbite/releases) of this repository.
 
 5. Place the FrostBite mod file into the mods folder of your Minecraft installation directory.
 
