@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2023 Sören Wedig - All Rights Reserved
+ * Copyright (C) 2023 Sören Wedig
  */
 
 package me.arktikus.frostbite.entity.client;
@@ -14,7 +14,6 @@ import software.bernie.geckolib.core.animatable.model.CoreGeoBone;
 import software.bernie.geckolib.core.animation.AnimationState;
 import software.bernie.geckolib.model.GeoModel;
 import software.bernie.geckolib.model.data.EntityModelData;
-
 
 /*
  * This file contains code derived from or based on code
